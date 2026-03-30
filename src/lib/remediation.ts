@@ -66,6 +66,15 @@ const QUESTION_NOTES: Record<number, string> = {
   5: `The employer is responsible for providing a laser safety program within the company to all employees who might come in contact with laser systems of Class 3B and Class 4. The employer is also responsible for performing hazard evaluation of each system and its corresponding workspace.`,
 
   6: `Medical examinations of employees should be considered. This includes having an eye doctor record an image of the retina, or record pre-existing skin damage on hands and face. Employees should also receive medical examinations immediately after known or suspected accidents.`,
+
+  // ── Control Measures (Q7–Q21) ────────────────────────────────────────
+  7: `Class 4 lasers require all of the same control measures as Class 3B, but also pose a risk to the surrounding volume by producing plasma radiation or other air contaminants. Both Class 3B and Class 4 require a supervisor during operation.`,
+
+  8: `Laser Control Areas should include warning signs, classification labels, interlocks, and protective enclosures.`,
+
+  13: `Laser safety goggles are wavelength specific. Look at the label on the goggles to see their OD number within a wavelength range.`,
+
+  14: `Optical Density numbers are measured on a logarithmic scale and are typically in integer number indicating the orders of magnitude of blockage of the beam. For example, a set of laser safety goggles with an OD number of 1 allows only 10% of the light to enter. An OD number of 2 allows only 1% of the light to enter, and so on.`,
 };
 
 /**
@@ -155,6 +164,209 @@ const REPHRASED_QUESTIONS: Record<number, Question> = {
     ],
     correctOptionId: "c",
     ansiRef: "Z136.1 §4.4.1",
+  },
+
+  // ── Control Measures (Q7–Q21) ────────────────────────────────────────
+  7: {
+    id: 107,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "A facility is setting up a new Class 3B laser workstation. Is a designated supervisor required during operation?",
+    options: [
+      { id: "a", text: "No — only Class 4 lasers require a supervisor" },
+      { id: "b", text: "Yes — both Class 3B and Class 4 lasers require a supervisor during operation" },
+      { id: "c", text: "Only if the laser is used in a confined space" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.1",
+  },
+  8: {
+    id: 108,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "A safety auditor inspects a laser controlled area and finds warning signs and interlocks, but no classification labels or protective enclosures. Is the area compliant?",
+    options: [
+      { id: "a", text: "Yes — warning signs and interlocks are sufficient" },
+      { id: "b", text: "No — laser controlled areas must also include classification labels and protective enclosures" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.5",
+  },
+  9: {
+    id: 109,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A Class 4 laser system has a push-button power switch but no key-operated master switch. Does this meet safety requirements?",
+    options: [
+      { id: "a", text: "Yes — any type of power switch is acceptable" },
+      { id: "b", text: "No — Class 3B and Class 4 systems must have a key-operated master switch" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.10",
+  },
+  10: {
+    id: 110,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A viewing window on a laser enclosure allows the full beam intensity to pass through. Is this acceptable?",
+    options: [
+      { id: "a", text: "Yes — viewing windows are just for observation convenience" },
+      { id: "b", text: "No — viewing windows must reduce transmitted light to below the MPE" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.7",
+  },
+  11: {
+    id: 111,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "An EMO switch is installed only inside the laser room. A worker outside cannot shut off the system in an emergency. Is this setup adequate?",
+    options: [
+      { id: "a", text: "Yes — only the operator inside needs access to the EMO" },
+      { id: "b", text: "No — EMO switches must be accessible both inside and outside the laser area" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.10.2",
+  },
+  12: {
+    id: 112,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A laser controlled area has a warning sign but no flashing light or audible alarm. Does the sign meet requirements?",
+    options: [
+      { id: "a", text: "Yes — the sign itself is sufficient" },
+      { id: "b", text: "No — laser warning signs should include either a flashing light or an audible alarm" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.5.1",
+  },
+  13: {
+    id: 113,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A technician grabs a pair of laser safety goggles from a drawer without checking the label. Could this be dangerous?",
+    options: [
+      { id: "a", text: "No — all laser goggles protect against all wavelengths equally" },
+      { id: "b", text: "Yes — goggles are wavelength-specific and the wrong pair may offer no protection" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6.2",
+  },
+  14: {
+    id: 114,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "A pair of laser safety goggles has an OD rating of 2 for a specific wavelength. What percentage of that laser light passes through?",
+    options: [
+      { id: "a", text: "10% (1/10th)" },
+      { id: "b", text: "1% (1/100th)" },
+      { id: "c", text: "0.1% (1/1000th)" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6.2.1",
+  },
+  15: {
+    id: 115,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A worker wears laser goggles but no lab coat or gloves while operating a Class 4 laser. Are they fully protected?",
+    options: [
+      { id: "a", text: "Yes — goggles are the only PPE required" },
+      { id: "b", text: "No — full PPE includes goggles, lab coats or smocks, and gloves" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6",
+  },
+  16: {
+    id: 116,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "The LSO asks the laser operator to buy their own safety goggles. Is this the correct responsibility assignment?",
+    options: [
+      { id: "a", text: "Yes — operators should purchase their own PPE" },
+      { id: "b", text: "No — the employer is responsible for purchasing PPE" },
+      { id: "c", text: "No — the LSO must purchase all PPE" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6.1",
+  },
+  17: {
+    id: 117,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "Laser safety goggles in the lab are scratched and have degraded OD ratings. Whose responsibility is it to inspect and replace them?",
+    options: [
+      { id: "a", text: "The employer" },
+      { id: "b", text: "The Laser Safety Officer (LSO)" },
+      { id: "c", text: "The individual operator" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6.1",
+  },
+  18: {
+    id: 118,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "An operator enters a laser controlled area without putting on the required goggles. Who is at fault for not wearing PPE?",
+    options: [
+      { id: "a", text: "The employer" },
+      { id: "b", text: "The LSO" },
+      { id: "c", text: "The operator" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §4.6.1",
+  },
+  19: {
+    id: 119,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "A facility addresses laser hazards by first issuing PPE, then writing procedures, and finally installing enclosures. Is this the correct order of priority?",
+    options: [
+      { id: "a", text: "Yes — PPE is the most effective control" },
+      { id: "b", text: "No — the correct hierarchy is engineering controls first, then administrative controls, then PPE" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3",
+  },
+  20: {
+    id: 120,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "A laser warning sign for an LCA displays only the hazard class and LSO contact info. Is the sign complete?",
+    options: [
+      { id: "a", text: "Yes — hazard class and LSO contact are sufficient" },
+      { id: "b", text: "No — it must also include required eyewear OD/wavelength and special precautionary instructions" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.5.3",
+  },
+  21: {
+    id: 121,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "When purchasing a laser cleaning system for outdoor use, why is it critical to choose a reputable manufacturer?",
+    options: [
+      { id: "a", text: "They offer longer warranties" },
+      { id: "b", text: "Their systems are lighter and more portable" },
+      { id: "c", text: "They provide verified technical specifications needed for proper hazard evaluation" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §4.2",
   },
 };
 
