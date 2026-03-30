@@ -1,6 +1,13 @@
 "use client";
 
-import { Question } from "@/lib/types";
+import { Question, Topic } from "@/lib/types";
+
+const TOPIC_LABELS: Record<Topic, string> = {
+  "laser-basics": "Laser Basics",
+  "control-measures": "Control Measures",
+  "non-beam-hazards": "Non-Beam Hazards",
+  "eye-skin-exposure": "Eye & Skin Exposure",
+};
 
 interface QuestionCardProps {
   question: Question;
@@ -24,6 +31,9 @@ export default function QuestionCard({
       {/* Question header */}
       <div className="bg-industrial-50 px-6 py-4 border-b border-industrial-100">
         <div className="flex items-center gap-2 mb-1">
+          <span className="inline-block bg-safety-orange/10 text-safety-orange text-xs font-semibold px-2 py-0.5 rounded-full">
+            {TOPIC_LABELS[question.topic]}
+          </span>
           <span className="text-xs font-mono text-industrial-400 uppercase">
             ANSI {question.ansiRef}
           </span>
