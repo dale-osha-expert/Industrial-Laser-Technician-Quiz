@@ -1,46 +1,71 @@
 // ---------------------------------------------------------------------------
-// ForkliftMastery — Remediation Engine (Mock)
+// Industrial Tech Master Quiz — Remediation Engine
 // Simulates AI-generated mini-lessons and rephrased questions.
 // ---------------------------------------------------------------------------
 
 import { Question, RemediationPayload, Topic } from "./types";
 
 /**
- * Topic-keyed lessons referencing specific OSHA 1910.178 clauses.
+ * Topic-keyed lessons referencing ANSI Z136.1.
  * Each lesson is ~200 words explaining the underlying safety principle.
  */
 const LESSONS: Record<Topic, string> = {
-  "stability-triangle": `**Understanding the Stability Triangle — OSHA 1910.178(l)**
+  "laser-basics": `**Understanding Laser Classifications — ANSI Z136.1**
 
-A sit-down counterbalanced forklift maintains stability through three contact points: the two front wheel axle ends and the rear axle pivot point. These three points form the "stability triangle." The combined center of gravity (truck + load) must remain inside this triangle at all times, or the truck will tip.
+Lasers are classified according to the hazard they present to the human body, primarily the eyes and skin. The classification system defined in ANSI Z136.1 ranges from Class 1 (safest) through Class 4 (most hazardous).
 
-When a load is picked up, the combined center of gravity shifts forward and upward. Turning at speed, especially with an elevated load, generates centrifugal force that can push the center of gravity laterally outside the triangle, causing a side tip-over.
+**Class 1** systems are incapable of producing damaging radiation under normal operating conditions — either because their output is inherently low or because a higher-power laser is fully enclosed with appropriate safety controls. **Class 2** lasers emit only visible light (400–700 nm) and rely on the human eye's natural aversion response (blink reflex) to prevent overexposure; they are considered safe as long as that reflex is not deliberately overridden.
 
-OSHA 1910.178(l)(6) requires operators to avoid sudden direction changes and to slow down before turns. Traveling with the load low (4–6 inches above floor level) and tilted back keeps the center of gravity low and within the triangle. On ramps, OSHA 1910.178(n)(7) requires that loaded forklifts travel with the load pointing upgrade — meaning reverse down a ramp with a load, and drive forward up a ramp with a load. These rules exist because a forward-facing load on a downgrade shifts the combined center of gravity beyond the front axle line, risking a forward tip-over.`,
+**Class 3R** systems present a small risk of eye injury if the beam is viewed directly or via specular (mirror-like) reflection, but diffuse reflections are generally safe. **Class 3B** lasers can cause immediate eye injury from direct or specularly reflected beams. **Class 4** lasers are the most dangerous — they pose hazards to eyes and skin from direct, specular, and even diffuse exposure, can ignite flammable materials, and may generate hazardous plasma radiation and air contaminants.
 
-  refueling: `**Safe Refueling & Charging Practices — OSHA 1910.178(f) & (g)**
+Employers bear responsibility for providing PPE and a complete laser safety program. Medical surveillance — including baseline eye exams — should be established, and examinations must occur immediately after any known or suspected laser incident.`,
 
-OSHA draws a clear distinction between fuel-powered and electric-powered industrial trucks. For LP-gas and diesel trucks, 1910.178(f)(12) mandates that the engine must be shut off during refueling and that no open flames or ignition sources are permitted in the refueling area. This prevents vapor ignition that can cause flash fires or explosions.
+  "control-measures": `**Laser Control Measures — ANSI Z136.1**
 
-For operations in enclosed spaces, 1910.178(f)(9) requires that ventilation be sufficient to keep exhaust gas concentrations (particularly carbon monoxide) below hazardous levels. If ventilation is inadequate, the truck must not be operated in that space.
+Control measures for laser safety follow a strict hierarchy: engineering controls first, then administrative controls, and finally personal protective equipment (PPE) as the last line of defense.
 
-Electric forklifts have their own hazards. During battery charging, lead-acid batteries emit hydrogen gas, which is highly flammable. OSHA 1910.178(g)(1) requires designated charging areas with adequate ventilation to disperse hydrogen, prohibition of open flames and sparks, and proper handling procedures for battery acid. Facilities operating both LP-gas and electric fleets must maintain separate, compliant areas for each — a shared area rarely meets the specific requirements of both standards. Fire extinguisher availability is required in both cases but is not sufficient on its own to allow combined areas.`,
+**Engineering controls** include protective enclosures, interlocks on doors and panels, key-operated master switches, beam stops, and viewing windows that reduce transmitted light below the Maximum Permissible Exposure (MPE). Class 3B and Class 4 systems must have a key-operated master switch and Emergency Machine Off (EMO) buttons located both inside and outside the laser controlled area.
 
-  "load-center": `**Load Center & Capacity De-rating — OSHA 1910.178(o)**
+**Administrative controls** include warning signs with flashing lights or audible alarms, standard operating procedures, designated laser controlled areas, and training requirements. Warning sign message panels must display the hazard class, required eyewear OD and wavelength, LSO contact information, and special precautionary instructions.
 
-Every forklift has a data plate specifying its rated load capacity at a given load center distance — typically 24 inches from the face of the forks. The load center is the horizontal distance from the fork face to the center of gravity of the load. This number is critical because it determines the moment arm acting on the truck's fulcrum point (the front axle).
+**PPE** includes laser safety goggles, lab coats or smocks, and gloves. Critically, laser safety goggles are wavelength-specific — each pair has an Optical Density (OD) rating for a particular wavelength range. OD is logarithmic: OD 1 blocks 90% of light (10% throughput), OD 2 blocks 99% (1% throughput), and so on. The employer purchases PPE, the LSO maintains it, and the operator is responsible for wearing it.`,
 
-When the actual load center exceeds the rated load center, the effective capacity of the truck decreases. The relationship is inversely proportional: Effective Capacity = Rated Capacity × (Rated Load Center ÷ Actual Load Center). For example, a truck rated at 5,000 lbs at 24" picking up a load centered at 30" has an effective capacity of 5,000 × (24 ÷ 30) = 4,000 lbs.
+  "non-beam-hazards": `**Non-Beam Hazards — ANSI Z136.1**
 
-OSHA 1910.178(o)(2) requires that trucks shall not be loaded beyond their rated capacity. Operators must know how to read the data plate and how to estimate the load center of irregularly shaped loads. Overloading — even by a small margin — shifts the combined center of gravity forward of the stability triangle, risking a tip-over. Always verify the load weight and center of gravity before lifting.`,
+Laser radiation is not the only hazard associated with laser systems. Non-beam hazards (NBH) include electrical dangers, chemical exposure, fire risk, non-laser radiation, and mechanical hazards.
 
-  "pedestrian-safety": `**Pedestrian Safety & Travel Rules — OSHA 1910.178(n)**
+**Electrical hazards** are among the most serious. Capacitors in pulsed laser power supplies can retain lethal charge even after the system is powered off. Resistive components generate heat and can cause thermal burns. Electrical control measures are required for circuits exceeding 50 volts, and safety is maintained through proper enclosures, grounding, and power indicator lights.
 
-Forklift-pedestrian incidents are among the most common causes of serious warehouse injuries. OSHA 1910.178(n)(1) requires operators to slow down and sound the horn at cross aisles, doorways, and anywhere pedestrians may be present. The intent is to provide audible warning so that pedestrians can clear the path.
+**Chemical and atmospheric hazards** arise when Class 4 laser beams interact with air or target materials, potentially producing plasma, ions, and toxic fumes. Compressed gases used in laser systems must be stored, labeled, exhausted, and protected from contaminants properly — different gases must never be mixed. Respiratory protection may be required.
 
-When the operator's view is obstructed by a bulky load, 1910.178(n)(4) requires the operator to travel in reverse so they have a clear line of sight in the direction of travel. Alternatively, a designated spotter may guide the operator, but traveling blind is never acceptable.
+**Fire hazards** are specific to Class 4 lasers. Beam blocks may require water cooling, and appropriately rated fire extinguishers (specifically rated for electrical fires) must be located in every laser controlled area. **Robotic arms and motorized stages** increase the Nominal Hazard Zone (NHZ). Workers need at least 3 feet of clearance around the system. Old laser systems should be returned to the manufacturer for safe disposal due to hazardous chemicals and electrical components.`,
 
-Speed must be maintained at a level that allows the operator to stop safely, accounting for floor conditions, congestion, and visibility. OSHA 1910.178(n)(8) prohibits stunt driving, horseplay, and the carrying of passengers. Operators must also yield the right-of-way to pedestrians at all times. Intersections, loading docks, and areas near break rooms are high-risk zones that require extra vigilance. Proper pedestrian barriers, floor markings, and mirrors supplement — but never replace — the operator's responsibility for safe travel.`,
+  "eye-skin-exposure": `**Eye and Skin Exposure — ANSI Z136.1**
+
+The Maximum Permissible Exposure (MPE) limits for eyes and skin are published by the American National Standards Institute (ANSI) in Z136.1. Different limits apply to different wavelengths and laser types.
+
+**Eye hazards** are the primary concern. When a collimated laser beam enters the eye, the cornea and lens focus it onto the retina, creating a very small spot with extremely high energy density. This can cause serious photochemical damage. The retinal hazard region spans from 400 nm to 1400 nm. For **visible lasers** (400–700 nm), the maximum exposure duration is 0.25 seconds for CW lasers, based on the eye's aversion response. For **near-IR lasers** (700–1400 nm), the maximum exposure duration extends to 10 seconds because the eye's natural movements and impulse to avert provide some protection even though the beam is invisible.
+
+**Skin exposure** poses a thermal damage risk rather than a photochemical one. While generally less severe than eye injuries, skin burns from high-power lasers can be significant. Protective clothing, including smocks and gloves, helps reduce skin exposure risk. Both eye and skin MPE limits must be evaluated during the hazard analysis of any Class 3B or Class 4 laser system.`,
+};
+
+/**
+ * Per-question NOTES from the course material.
+ * Included as the first part of the remediation lesson for targeted feedback.
+ */
+const QUESTION_NOTES: Record<number, string> = {
+  // ── Laser Basics (Q1–Q6) ─────────────────────────────────────────────
+  1: `Class 1 systems are not capable of damaging the human body or eyes. This is either because the radiation level they produce is not dangerous, or they have a higher power laser embedded in the system that has the appropriate safety control measures.`,
+
+  2: `Class 2 systems are safe in that the human eye's natural reflex to avert keeps it from absorbing too much radiation before it is damaged. These lasers must be in the visible spectrum (400-700 nm).`,
+
+  3: `Class 3R systems can be potentially hazardous if the beam is viewed directly or is viewed reflecting off of a specular (smooth) surface. However, the probability of injury is small.`,
+
+  4: `Class 4 systems are hazardous to the skin and eyes under direct incidence, and also pose a fire hazard. They are also capable of producing dangerous plasma radiation and air contaminants.`,
+
+  5: `The employer is responsible for providing a laser safety program within the company to all employees who might come in contact with laser systems of Class 3B and Class 4. The employer is also responsible for performing hazard evaluation of each system and its corresponding workspace.`,
+
+  6: `Medical examinations of employees should be considered. This includes having an eye doctor record an image of the retina, or record pre-existing skin damage on hands and face. Employees should also receive medical examinations immediately after known or suspected accidents.`,
 };
 
 /**
@@ -48,170 +73,110 @@ Speed must be maintained at a level that allows the operator to stop safely, acc
  * Each provides a new scenario testing the same underlying concept.
  */
 const REPHRASED_QUESTIONS: Record<number, Question> = {
+  // ── Laser Basics (Q1–Q6) ─────────────────────────────────────────────
   1: {
     id: 101,
-    topic: "pedestrian-safety",
+    topic: "laser-basics",
     difficulty: "easy",
     questionText:
-      "A forklift operator is approaching a blind intersection inside a warehouse. Per OSHA 1910.178(n)(1), what should the operator do?",
+      "A laser system is labeled Class 1. Under normal operating conditions, can this system damage a person's eyes or skin?",
     options: [
-      { id: "a", text: "Accelerate through the intersection to minimize exposure time" },
-      { id: "b", text: "Stop, sound the horn, and proceed slowly while watching for pedestrians" },
-      { id: "c", text: "Turn on the emergency flashers and maintain speed" },
-      { id: "d", text: "Have a coworker radio ahead to clear the area" },
+      { id: "a", text: "No — Class 1 systems are incapable of producing hazardous radiation levels under normal use" },
+      { id: "b", text: "Yes — all lasers can cause eye damage regardless of class" },
     ],
-    correctOptionId: "b",
-    oshaClause: "1910.178(n)(1)",
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §3.3.1",
   },
   2: {
     id: 102,
-    topic: "refueling",
+    topic: "laser-basics",
     difficulty: "easy",
     questionText:
-      "A worker needs to change the propane tank on a forklift. Which step must happen FIRST per OSHA 1910.178(f)(12)?",
+      "What natural human reflex makes Class 2 lasers safe under normal conditions?",
     options: [
-      { id: "a", text: "Open the new propane tank valve to check for gas flow" },
-      { id: "b", text: "Shut off the forklift engine completely" },
-      { id: "c", text: "Move the truck into direct sunlight for better visibility" },
-      { id: "d", text: "Remove the old tank while the engine idles" },
+      { id: "a", text: "The pupil constriction reflex that blocks all incoming light" },
+      { id: "b", text: "The blink/aversion response that causes you to look away from bright visible light" },
     ],
     correctOptionId: "b",
-    oshaClause: "1910.178(f)(12)",
+    ansiRef: "Z136.1 §3.3.2",
   },
   3: {
     id: 103,
-    topic: "stability-triangle",
-    difficulty: "easy",
+    topic: "laser-basics",
+    difficulty: "medium",
     questionText:
-      "Why is the rear axle of a counterbalanced forklift considered a single point of the stability triangle rather than two separate points?",
+      "A Class 3R laser beam bounces off a polished metal surface into a worker's eyes. What type of reflection caused this hazard?",
     options: [
-      { id: "a", text: "Because the rear wheels are smaller than the front wheels" },
-      { id: "b", text: "Because the rear axle pivots on a central pin, making it a single balance point" },
-      { id: "c", text: "Because the rear wheels are not load-bearing" },
-      { id: "d", text: "Because the counterweight is centered over one rear wheel" },
+      { id: "a", text: "Diffuse reflection from a rough surface" },
+      { id: "b", text: "Specular reflection from a smooth surface" },
+      { id: "c", text: "Diffractive scattering through an aperture" },
     ],
     correctOptionId: "b",
-    oshaClause: "1910.178(l)(1)",
+    ansiRef: "Z136.1 §3.3.3",
   },
   4: {
     id: 104,
-    topic: "load-center",
-    difficulty: "easy",
+    topic: "laser-basics",
+    difficulty: "medium",
     questionText:
-      "A forklift's data plate says '5,000 lbs at 24\" LC.' What does '24\" LC' mean?",
+      "A facility needs to evaluate fire risk from its laser systems. Which class of laser must be considered a potential ignition source?",
     options: [
-      { id: "a", text: "The forks are 24 inches long" },
-      { id: "b", text: "The load's center of gravity is assumed to be 24 inches from the fork face" },
-      { id: "c", text: "The load must be exactly 24 inches wide" },
-      { id: "d", text: "The lift height is limited to 24 inches" },
+      { id: "a", text: "Class 2" },
+      { id: "b", text: "Class 3B" },
+      { id: "c", text: "Class 4" },
     ],
-    correctOptionId: "b",
-    oshaClause: "1910.178(o)(2)",
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §3.3.5",
   },
   5: {
     id: 105,
-    topic: "stability-triangle",
-    difficulty: "medium",
+    topic: "laser-basics",
+    difficulty: "easy",
     questionText:
-      "An operator is carrying a load at full mast height while making a sharp right turn. What physical force is most likely to cause a tip-over?",
+      "A new laser technician asks who should pay for and supply the required safety equipment. Who has this responsibility?",
     options: [
-      { id: "a", text: "Gravitational compression on the rear axle" },
-      { id: "b", text: "Centrifugal force pushing the center of gravity outside the stability triangle" },
-      { id: "c", text: "Wind resistance on the elevated load" },
-      { id: "d", text: "Hydraulic pressure loss in the lift cylinders" },
+      { id: "a", text: "Each individual technician" },
+      { id: "b", text: "The employer" },
+      { id: "c", text: "The laser manufacturer" },
     ],
     correctOptionId: "b",
-    oshaClause: "1910.178(l)(6)",
+    ansiRef: "Z136.1 §4.6.1",
   },
   6: {
     id: 106,
-    topic: "refueling",
+    topic: "laser-basics",
     difficulty: "medium",
     questionText:
-      "A warehouse manager wants to use a diesel forklift in a cold-storage room with limited ventilation. Per OSHA 1910.178(f)(9), what must be evaluated first?",
+      "A technician suspects they were briefly exposed to a Class 4 laser beam. When should a medical examination be scheduled?",
     options: [
-      { id: "a", text: "Whether the forklift has a valid inspection sticker" },
-      { id: "b", text: "Whether ventilation is adequate to prevent hazardous exhaust gas accumulation" },
-      { id: "c", text: "Whether the room temperature is above freezing" },
-      { id: "d", text: "Whether a fire extinguisher is within 25 feet" },
-    ],
-    correctOptionId: "b",
-    oshaClause: "1910.178(f)(9)",
-  },
-  7: {
-    id: 107,
-    topic: "pedestrian-safety",
-    difficulty: "medium",
-    questionText:
-      "An operator is carrying a large crate that completely blocks their forward view. Per OSHA 1910.178(n)(4), how should they travel?",
-    options: [
-      { id: "a", text: "Drive forward very slowly with the horn sounding continuously" },
-      { id: "b", text: "Drive in reverse to maintain a clear sightline" },
-      { id: "c", text: "Raise the load above eye level and drive forward" },
-      { id: "d", text: "Ask nearby workers to move out of the way, then drive forward" },
-    ],
-    correctOptionId: "b",
-    oshaClause: "1910.178(n)(4)",
-  },
-  8: {
-    id: 108,
-    topic: "load-center",
-    difficulty: "hard",
-    questionText:
-      "A forklift rated at 6,000 lbs at a 24\" load center picks up a pallet whose center of gravity is at 36\". What is the approximate effective capacity?",
-    options: [
-      { id: "a", text: "6,000 lbs" },
-      { id: "b", text: "4,800 lbs" },
-      { id: "c", text: "4,000 lbs" },
-      { id: "d", text: "5,400 lbs" },
+      { id: "a", text: "Within 24 hours of the incident" },
+      { id: "b", text: "At the next scheduled check-up" },
+      { id: "c", text: "Immediately after the suspected exposure" },
     ],
     correctOptionId: "c",
-    oshaClause: "1910.178(o)(2)",
-  },
-  9: {
-    id: 109,
-    topic: "stability-triangle",
-    difficulty: "hard",
-    questionText:
-      "An operator must drive a loaded forklift UP a 10% grade ramp. Per OSHA 1910.178(n)(7), which direction should the load face?",
-    options: [
-      { id: "a", text: "Load facing downhill (drive in reverse up the ramp)" },
-      { id: "b", text: "Load facing uphill (drive forward up the ramp)" },
-      { id: "c", text: "Sideways to distribute weight evenly" },
-      { id: "d", text: "It doesn't matter as long as the load is below 50% capacity" },
-    ],
-    correctOptionId: "b",
-    oshaClause: "1910.178(n)(7)",
-  },
-  10: {
-    id: 110,
-    topic: "refueling",
-    difficulty: "hard",
-    questionText:
-      "A facility has a single ventilated room designated for both LP-gas refueling and battery charging. Per OSHA 1910.178(f)(1) and (g)(1), is this arrangement compliant?",
-    options: [
-      { id: "a", text: "Yes, if a Class ABC fire extinguisher is mounted by the door" },
-      { id: "b", text: "Yes, as long as the operations do not happen simultaneously" },
-      { id: "c", text: "No — each operation has distinct ventilation, ignition-source, and hazard requirements that are unlikely to be met in a shared space" },
-      { id: "d", text: "No — battery charging can only occur outdoors" },
-    ],
-    correctOptionId: "c",
-    oshaClause: "1910.178(f)(1), 1910.178(g)(1)",
+    ansiRef: "Z136.1 §4.4.1",
   },
 };
 
 /**
  * Simulates an AI-generated remediation payload.
- * Returns a mini-lesson + a rephrased question after a 1-second delay.
+ * Returns a mini-lesson (question NOTES + topic lesson) and a rephrased question after a 1-second delay.
  */
 export async function simulateRemediation(
   originalQuestion: Question
 ): Promise<RemediationPayload> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const lesson =
+      const topicLesson =
         LESSONS[originalQuestion.topic] ??
         "No lesson content available for this topic.";
+
+      const questionNote = QUESTION_NOTES[originalQuestion.id];
+
+      // Combine question-specific notes with the broader topic lesson
+      const lesson = questionNote
+        ? `**Why your answer was incorrect:**\n\n${questionNote}\n\n${topicLesson}`
+        : topicLesson;
 
       const rephrased =
         REPHRASED_QUESTIONS[originalQuestion.id] ?? {

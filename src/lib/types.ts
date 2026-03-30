@@ -1,16 +1,16 @@
 // ---------------------------------------------------------------------------
-// ForkliftMastery — Type Definitions
-// All content aligned to OSHA Standard 1910.178 (Powered Industrial Trucks)
+// Industrial Tech Master Quiz — Type Definitions
+// Content aligned to ANSI Z136.1 (Safe Use of Lasers)
 // ---------------------------------------------------------------------------
 
-/** Topics derived from the four key areas of 1910.178 */
+/** Topics derived from the four key areas of laser safety */
 export type Topic =
-  | "stability-triangle"
-  | "refueling"
-  | "load-center"
-  | "pedestrian-safety";
+  | "laser-basics"
+  | "control-measures"
+  | "non-beam-hazards"
+  | "eye-skin-exposure";
 
-/** Difficulty tiers map to the 10-question progression */
+/** Difficulty tiers map to the question progression */
 export type Difficulty = "easy" | "medium" | "hard";
 
 /** A single answer option */
@@ -27,8 +27,8 @@ export interface Question {
   questionText: string;
   options: AnswerOption[];
   correctOptionId: string;
-  /** OSHA clause reference for remediation content */
-  oshaClause: string;
+  /** ANSI Z136.1 reference for remediation content */
+  ansiRef: string;
 }
 
 /** The mini-lesson + rephrased question returned by the remediation engine */
