@@ -2,7 +2,15 @@
 
 import Link from "next/link";
 
-const QUIZZES = [
+interface QuizEntry {
+  title: string;
+  description: string;
+  href: string;
+  questionCount: number;
+  comingSoon?: boolean;
+}
+
+const QUIZZES: QuizEntry[] = [
   {
     title: "Industrial Tech Master Quiz",
     description:
@@ -15,8 +23,7 @@ const QUIZZES = [
     description:
       "Assess your readiness as a Laser Safety Officer — responsibilities, hazard evaluation, and program management.",
     href: "/industrial-lso-quiz",
-    questionCount: 0,
-    comingSoon: true,
+    questionCount: 12,
   },
 ];
 
