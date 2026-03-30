@@ -139,10 +139,10 @@ export default function ExamPage() {
             <span className="text-2xl">&#9888;</span>
             <div>
               <h1 className="font-bold text-lg leading-tight">
-                ForkliftMastery
+                Industrial Tech Master Quiz
               </h1>
               <p className="text-industrial-400 text-xs">
-                OSHA 1910.178 Certification Exam
+                Laser Safety Assessment
               </p>
             </div>
           </div>
@@ -205,7 +205,7 @@ export default function ExamPage() {
 
       {/* Footer */}
       <footer className="bg-industrial-900 text-industrial-500 text-center text-xs py-3">
-        Content derived from OSHA Standard 1910.178 — Powered Industrial Trucks
+        Industrial Laser Safety — Technician Knowledge Assessment
       </footer>
     </main>
   );

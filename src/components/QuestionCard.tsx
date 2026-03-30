@@ -25,7 +25,7 @@ export default function QuestionCard({
       <div className="bg-industrial-50 px-6 py-4 border-b border-industrial-100">
         <div className="flex items-center gap-2 mb-1">
           <span className="text-xs font-mono text-industrial-400 uppercase">
-            OSHA {question.oshaClause}
+            ANSI {question.ansiRef}
           </span>
         </div>
         <h2 className="text-industrial-900 font-semibold text-lg leading-snug">

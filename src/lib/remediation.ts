@@ -100,6 +100,21 @@ const QUESTION_NOTES: Record<number, string> = {
   34: `The workspace should also be easily accessible and not contain hindrances to personnel moving around in the NHZ. Such hindrances include loose wires on the ground, awkwardly placed enclosures, or other impediments to their movement. A good rule of thumb is to have at least 3 feet of space around the optical table or laser system enclosure.`,
 
   35: `Special care should be given to the disposal of laser systems. They contain harmful chemicals and hazardous electrical components that cannot be disposed of. Whenever possible, unused lasers should be stored safely or returned to the manufacturer.`,
+
+  // ── Eye & Skin Exposure (Q37–Q43) ───────────────────────────────────
+  37: `Refer to the American National Standards Institute for the maximum permissible exposure limits for eyes and skin. There are different ratings for specific wavelengths and laser types.`,
+
+  38: `Collimated laser beams create a highly focused spot on the retina and can cause serious photochemical damage.`,
+
+  39: `The retinal hazard region spans from 400 nm to 1400 nm.`,
+
+  40: `For near IR lasers (between 700 and 1400 nm), the eye's natural aversion response is considered. The maximum exposure duration is 10 seconds, due to the fact that the eye's natural movements and impulse to avert will protect the viewer if retinal damage starts to take place.`,
+
+  41: `For visible lasers (between 400 and 700 nm), the maximum exposure duration drops down to 0.25 seconds for CW lasers.`,
+
+  42: `Skin exposure to laser beams pose a thermal damage risk.`,
+
+  43: `Eye exposure to laser beams pose a photochemical damage risk.`,
 };
 
 /**
@@ -594,6 +609,103 @@ const REPHRASED_QUESTIONS: Record<number, Question> = {
     ],
     correctOptionId: "b",
     ansiRef: "Z136.1 §7.4.2",
+  },
+
+  // ── Eye & Skin Exposure (Q37–Q43) ───────────────────────────────────
+  37: {
+    id: 137,
+    topic: "eye-skin-exposure",
+    difficulty: "easy",
+    questionText:
+      "A technician needs to look up the MPE limits for a 532 nm laser. Which organization publishes these limits?",
+    options: [
+      { id: "a", text: "The Occupational Safety and Health Administration (OSHA)" },
+      { id: "b", text: "The American National Standards Institute (ANSI)" },
+      { id: "c", text: "The American Physical Society" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.2",
+  },
+  38: {
+    id: 138,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "Why is a collimated laser beam particularly dangerous to the eye compared to a diverging light source?",
+    options: [
+      { id: "a", text: "Because collimated beams are always invisible" },
+      { id: "b", text: "Because the eye focuses the parallel beam to a tiny, extremely high-energy spot on the retina" },
+      { id: "c", text: "Because collimated beams bypass the cornea entirely" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.1",
+  },
+  39: {
+    id: 139,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "A laser operates at 850 nm. Is this within the visible range?",
+    options: [
+      { id: "a", text: "Yes — 850 nm is visible red light" },
+      { id: "b", text: "No — the visible range is 400-700 nm; 850 nm is in the near-infrared" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.1.1",
+  },
+  40: {
+    id: 140,
+    topic: "eye-skin-exposure",
+    difficulty: "hard",
+    questionText:
+      "A worker is exposed to a 1064 nm (near IR) CW laser beam. Based on the maximum exposure duration for this wavelength range, how long before retinal damage may begin?",
+    options: [
+      { id: "a", text: "0.25 seconds" },
+      { id: "b", text: "10 seconds" },
+      { id: "c", text: "60 seconds" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.2.3",
+  },
+  41: {
+    id: 141,
+    topic: "eye-skin-exposure",
+    difficulty: "hard",
+    questionText:
+      "A 532 nm (green, visible) CW laser accidentally strikes a worker's eye. What is the maximum safe exposure duration before damage is expected?",
+    options: [
+      { id: "a", text: "0.25 seconds" },
+      { id: "b", text: "1 second" },
+      { id: "c", text: "10 seconds" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §8.2.2",
+  },
+  42: {
+    id: 142,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "A laser beam strikes a worker's exposed forearm. What type of damage is most likely?",
+    options: [
+      { id: "a", text: "Photochemical damage to the skin cells" },
+      { id: "b", text: "A thermal burn from absorbed laser energy" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.3",
+  },
+  43: {
+    id: 143,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "A laser beam enters a worker's eye and is focused onto the retina. What type of damage mechanism is the primary concern?",
+    options: [
+      { id: "a", text: "Thermal burn to the retinal tissue" },
+      { id: "b", text: "Photochemical damage to the retinal cells" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.1",
   },
 };
 

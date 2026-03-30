@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ForkliftMastery — OSHA 1910.178 Certification Exam",
+  title: "Industrial Tech Master Quiz — Laser Safety Assessment",
   description:
-    "Adaptive forklift certification exam with remediation-based learning, aligned to OSHA Standard 1910.178 (Powered Industrial Trucks).",
+    "Adaptive laser safety quiz with remediation-based learning for industrial laser technicians, aligned to ANSI Z136.1.",
 };
 
 export default function RootLayout({

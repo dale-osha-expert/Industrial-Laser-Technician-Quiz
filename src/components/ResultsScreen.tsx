@@ -26,7 +26,7 @@ export default function ResultsScreen({
           {passed ? "Certification Passed!" : "Certification Not Achieved"}
         </h2>
         <p className="text-white/80 mt-1">
-          OSHA 1910.178 — Powered Industrial Trucks
+          ANSI Z136.1 — Industrial Laser Safety
         </p>
       </div>
 
@@ -44,8 +44,8 @@ export default function ResultsScreen({
           </h3>
           <p className="text-sm text-industrial-600 leading-relaxed">
             {passed
-              ? "You have demonstrated knowledge of OSHA 1910.178 powered industrial truck safety standards. This written exam is one component of full certification, which also requires a practical driving evaluation and workplace-specific training."
-              : "A score of 70% or higher is required to pass. Review the OSHA 1910.178 standard, focusing on the areas where remediation was triggered, then retake the exam."}
+              ? "You have demonstrated knowledge of industrial laser safety standards aligned to ANSI Z136.1. This assessment covers laser classifications, control measures, non-beam hazards, and eye and skin exposure principles."
+              : "A score of 70% or higher is required to pass. Review the ANSI Z136.1 standard, focusing on the areas where remediation was triggered, then retake the assessment."}
           </p>
         </div>
 
