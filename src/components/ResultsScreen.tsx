@@ -4,12 +4,18 @@ interface ResultsScreenProps {
   score: number;
   totalQuestions: number;
   onRestart: () => void;
+  resultsSubtitle: string;
+  passedMessage: string;
+  failedMessage: string;
 }
 
 export default function ResultsScreen({
   score,
   totalQuestions,
   onRestart,
+  resultsSubtitle,
+  passedMessage,
+  failedMessage,
 }: ResultsScreenProps) {
   const percentage = Math.round((score / totalQuestions) * 100);
   const passed = percentage >= 70;
@@ -26,7 +32,7 @@ export default function ResultsScreen({
           {passed ? "Certification Passed!" : "Certification Not Achieved"}
         </h2>
         <p className="text-white/80 mt-1">
-          ANSI Z136.1 — Industrial Laser Safety
+          {resultsSubtitle}
         </p>
       </div>
 
@@ -43,9 +49,7 @@ export default function ResultsScreen({
             {passed ? "What this means:" : "Next steps:"}
           </h3>
           <p className="text-sm text-industrial-600 leading-relaxed">
-            {passed
-              ? "You have demonstrated knowledge of industrial laser safety standards aligned to ANSI Z136.1. This assessment covers laser classifications, control measures, non-beam hazards, and eye and skin exposure principles."
-              : "A score of 70% or higher is required to pass. Review the ANSI Z136.1 standard, focusing on the areas where remediation was triggered, then retake the assessment."}
+            {passed ? passedMessage : failedMessage}
           </p>
         </div>
 

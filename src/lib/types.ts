@@ -49,3 +49,15 @@ export interface ExamState {
   selectedAnswerId: string | null;
   showFeedback: boolean;
 }
+
+/** Configuration for a specific quiz instance */
+export interface QuizConfig {
+  title: string;
+  subtitle: string;
+  footerText: string;
+  resultsSubtitle: string;
+  passedMessage: string;
+  failedMessage: string;
+  questions: Question[];
+  remediate: (question: Question) => Promise<RemediationPayload>;
+}

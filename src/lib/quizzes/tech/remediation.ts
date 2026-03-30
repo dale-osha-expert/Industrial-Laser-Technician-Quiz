@@ -3,7 +3,7 @@
 // Simulates AI-generated mini-lessons and rephrased questions.
 // ---------------------------------------------------------------------------
 
-import { Question, RemediationPayload, Topic } from "./types";
+import { Question, RemediationPayload, Topic } from "@/lib/types";
 
 /**
  * Topic-keyed lessons referencing ANSI Z136.1.

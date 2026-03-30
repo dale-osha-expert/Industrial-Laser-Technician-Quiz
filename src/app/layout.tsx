@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Industrial Tech Master Quiz — Laser Safety Assessment",
+  title: "Industrial Laser Safety — Knowledge Assessment Hub",
   description:
-    "Adaptive laser safety quiz with remediation-based learning for industrial laser technicians, aligned to ANSI Z136.1.",
+    "Adaptive laser safety quizzes with remediation-based learning for industrial laser technicians and safety officers.",
 };
 
 export default function RootLayout({

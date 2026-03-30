@@ -3,7 +3,7 @@
 // 40 questions covering four laser safety topic areas.
 // ---------------------------------------------------------------------------
 
-import { Question } from "./types";
+import { Question } from "@/lib/types";
 
 export const BASE_QUESTIONS: Question[] = [
   // ── Topic: Laser Basics (Questions 1–6) ──────────────────────────────────
