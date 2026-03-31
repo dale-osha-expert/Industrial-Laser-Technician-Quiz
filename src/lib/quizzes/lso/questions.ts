@@ -604,4 +604,231 @@ export const BASE_QUESTIONS: Question[] = [
     correctOptionId: "c",
     ansiRef: "Z136.1 §4.2",
   },
+
+  // ── Topic: Non-Beam Hazards (Questions 42–58) ────────────────────────────
+
+  {
+    id: 42,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "True or False? Laser radiation is the only source of hazard from the system.",
+    options: [
+      { id: "a", text: "True" },
+      { id: "b", text: "False" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7",
+  },
+  {
+    id: 43,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "True or False? Class 4 lasers are capable of releasing hazardous chemicals, plasma, and ions into the air.",
+    options: [
+      { id: "a", text: "True" },
+      { id: "b", text: "False" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §7.3",
+  },
+  {
+    id: 44,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "What type of electrical component poses a shock hazard?",
+    options: [
+      { id: "a", text: "Resistors" },
+      { id: "b", text: "Capacitors" },
+      { id: "c", text: "Inductors" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.4.1",
+  },
+  {
+    id: 45,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "What type of electrical component poses a thermal hazard?",
+    options: [
+      { id: "a", text: "Resistors" },
+      { id: "b", text: "Capacitors" },
+      { id: "c", text: "Inductors" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §7.4.2",
+  },
+  {
+    id: 46,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "True or False? Any fire extinguisher, regardless of its rating, is adequate to maintain safety around a laser system.",
+    options: [
+      { id: "a", text: "True" },
+      { id: "b", text: "False" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.5",
+  },
+  {
+    id: 47,
+    topic: "non-beam-hazards",
+    difficulty: "hard",
+    questionText:
+      "Electrical control measures are required for circuits containing what voltage?",
+    options: [
+      { id: "a", text: "9 V" },
+      { id: "b", text: "12 V" },
+      { id: "c", text: "Greater Than 50 V" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §7.4",
+  },
+  {
+    id: 48,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "Which control measures contribute to electrical safety?",
+    options: [
+      { id: "a", text: "Enclosures" },
+      { id: "b", text: "Grounding" },
+      { id: "c", text: "Indicator Lights" },
+      { id: "d", text: "All of the above" },
+    ],
+    correctOptionId: "d",
+    ansiRef: "Z136.1 §7.4.3",
+  },
+  {
+    id: 49,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "High power lasers pose which type of Non-Laser Radiation hazards?",
+    options: [
+      { id: "a", text: "Radio Waves" },
+      { id: "b", text: "X-Rays" },
+      { id: "c", text: "Thermal Radiation" },
+      { id: "d", text: "Ionizing Radiation" },
+      { id: "e", text: "All of the above" },
+    ],
+    correctOptionId: "e",
+    ansiRef: "Z136.1 §7.6",
+  },
+  {
+    id: 50,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "True or False? UV radiation can cause cataracts over time.",
+    options: [
+      { id: "a", text: "True" },
+      { id: "b", text: "False" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §7.6.1",
+  },
+  {
+    id: 51,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "What type of laser poses a fire hazard?",
+    options: [
+      { id: "a", text: "Class 1" },
+      { id: "b", text: "Class 2" },
+      { id: "c", text: "Class 3" },
+      { id: "d", text: "Class 4" },
+    ],
+    correctOptionId: "d",
+    ansiRef: "Z136.1 §7.5",
+  },
+  {
+    id: 52,
+    topic: "non-beam-hazards",
+    difficulty: "hard",
+    questionText:
+      "The use of robotic arms and motorized stages does what to the Nominal Hazard Zone (NHZ)?",
+    options: [
+      { id: "a", text: "Increases its area" },
+      { id: "b", text: "Decreases its area" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §7.7",
+  },
+  {
+    id: 53,
+    topic: "non-beam-hazards",
+    difficulty: "hard",
+    questionText:
+      "Which of the following is NOT an appropriate way to work with hazardous and compressed gases?",
+    options: [
+      { id: "a", text: "Stored properly" },
+      { id: "b", text: "Exhausted properly" },
+      { id: "c", text: "Labeled properly" },
+      { id: "d", text: "Protected from contaminants" },
+      { id: "e", text: "Mixed with other gases" },
+      { id: "f", text: "Worked around using respiratory protection" },
+    ],
+    correctOptionId: "e",
+    ansiRef: "Z136.1 §7.3.2",
+  },
+  {
+    id: 54,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "True or False? The LSO is responsible for considering the ergonomics of the SOPs of laser systems, to reduce repetitive injury.",
+    options: [
+      { id: "a", text: "True" },
+      { id: "b", text: "False" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §7.7.2",
+  },
+  {
+    id: 55,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "How much room should the worker have in the area surrounding a laser system?",
+    options: [
+      { id: "a", text: "1 foot" },
+      { id: "b", text: "3 feet" },
+      { id: "c", text: "10 feet" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.7.1",
+  },
+  {
+    id: 56,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "What is the best way to dispose of an old laser system?",
+    options: [
+      { id: "a", text: "Place it in recycling bin" },
+      { id: "b", text: "Stored in a flame proof cabinet" },
+      { id: "c", text: "Return it to the manufacturer" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §7.8",
+  },
+  {
+    id: 57,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "True or False: Engineering control measures, including a warning sign, are required if a surface in the laser control area exceeds 50°C?",
+    options: [
+      { id: "a", text: "True" },
+      { id: "b", text: "False" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §7.4.2",
+  },
 ];

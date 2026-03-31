@@ -93,6 +93,35 @@ const QUESTION_NOTES: Record<number, string> = {
   33: `Laser safety goggles are wavelength specific. Look at the label on the goggles to see their OD number within a wavelength range.`,
 
   34: `Optical Density numbers are measured on a logarithmic scale and are typically in integer number indicating the orders of magnitude of blockage of the beam. For example, a set of laser safety goggles with an OD number of 1 allows only 10% of the light to enter. An OD number of 2 allows only 1% of the light to enter, and so on.`,
+
+  // ── Non-Beam Hazards (Q42–Q57) ──────────────────────────────────────
+  43: `Non-Beam Hazards (NBH) consist of chemicals that may be released into the air surrounding the laser system, either from the reaction of the beam itself with the air, or with other materials coming into contact with the radiant energy. Class 4 Lasers are capable of transforming gaseous air (CO2, N20, and O2) into plasma or ions. Other materials that absorb radiant energy may melt or outgas other hazardous chemicals into the air.`,
+
+  44: `Electrical shocks also fall into the category of NBH. Special attention should be given to the setup and maintenance of power supplies, circuits, and exposed wires that drive the laser system. Many pulsed lasers are powered with capacitors, which can retain their charge even after the system is powered off.`,
+
+  45: `Other components in the electrical system of the laser may be subject to resistive heating, in which a current flow through a resistive material absorbs some portion of the energy flowing through it and radiates heat. Coming into contact with these resistive components could result in a thermal burn to the skin.`,
+
+  46: `In case of an electrical system malfunction, fire extinguishers should be located inside every laser-controlled area. Note that not all fire extinguishers work on electrical fires. Be sure to select one that is rated specifically for electrical fires.`,
+
+  47: `Electrical control measures are required for circuits containing more than 50 volts. If you are building a custom electrical system for the laser, consult with an electrical engineer, or have the system inspected by the facility's electrician.`,
+
+  48: `Most of the electrical hazards can be mitigated by proper enclosures, grounding, and power indicator lights.`,
+
+  49: `Non-Laser Radiation includes radio waves, X-rays, thermal radiation, and ionizing radiation.`,
+
+  50: `Exposed gain medium tubes and pump lamps can emit UV radiation. These can cause cataracts over time. These should be properly enclosed or viewed with laser safety goggles rated for UV radiation.`,
+
+  51: `Any flammable material in the beam path poses a fire hazard. Class 4 Laser beam should only ever come into contact with optics, mirrors, or appropriately rated beam blocks. Sometimes these beam blocks need to be water cooled, depending on the energy absorption rating.`,
+
+  52: `Robotic arms or motorized stages also pose a mechanical hazard. These are especially present in industrial laser cutters, where the beam is guided by automated motorized robotic translation stages and mirrors. These types of applications increase the NHZ of the system.`,
+
+  53: `Different gases should be stored separately.`,
+
+  54: `There are also human factors when it comes to implementation of laser safety control measures. Workers' limbs can be injured over time during operation and maintenance of laser systems, so the LSO should be aware of the ergonomics of these SOPs. Contributing factors are workstation layout, height, fixturing, sharp edges, lighting, or repetitive motions. The worker could also be injured by bright flashing lights, pulse output, or other optical effects.`,
+
+  55: `The workspace should also be easily accessible and not contain hindrances to personnel moving around in the NHZ. Such hindrances include loose wires on the ground, awkwardly placed enclosures, or other impediments to their movement. A good rule of thumb is to have at least 3 feet of space around the optical table or laser system enclosure.`,
+
+  56: `Special care should be given to the disposal of laser systems. They contain harmful chemicals and hazardous electrical components that cannot be disposed of. Whenever possible, unused lasers should be stored safely or returned to the manufacturer.`,
 };
 
 /**
@@ -647,6 +676,219 @@ const REPHRASED_QUESTIONS: Record<number, Question> = {
     ],
     correctOptionId: "b",
     ansiRef: "Z136.1 §4.2",
+  },
+
+  // ── Non-Beam Hazards (Q42–Q57) ──────────────────────────────────────
+  42: {
+    id: 142,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "A technician assumes the laser beam is the only hazard to worry about. Is this correct?",
+    options: [
+      { id: "a", text: "Yes — the beam is the sole source of danger" },
+      { id: "b", text: "No — laser systems also produce non-beam hazards such as electrical, chemical, and fire risks" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7",
+  },
+  43: {
+    id: 143,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "A Class 4 laser is processing material in an enclosed workspace. Could the air quality be affected?",
+    options: [
+      { id: "a", text: "No — laser beams do not interact with air" },
+      { id: "b", text: "Yes — Class 4 lasers can produce plasma, ions, and hazardous chemical fumes" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.3",
+  },
+  44: {
+    id: 144,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "A pulsed laser system has been powered off. A technician opens the power supply to adjust a component. What electrical hazard should the LSO warn about?",
+    options: [
+      { id: "a", text: "Inductors generating magnetic fields" },
+      { id: "b", text: "Capacitors that may still retain a lethal charge" },
+      { id: "c", text: "Resistors producing static electricity" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.4.1",
+  },
+  45: {
+    id: 145,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "A technician touches a component inside a laser power supply and gets a mild burn, though the laser beam was not involved. What most likely caused this?",
+    options: [
+      { id: "a", text: "A resistive component radiating heat from current flow" },
+      { id: "b", text: "A capacitor discharging stored energy" },
+      { id: "c", text: "An inductor generating electromagnetic interference" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §7.4.2",
+  },
+  46: {
+    id: 146,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "A standard water-based fire extinguisher is placed in a laser controlled area. Is this adequate for all fire scenarios?",
+    options: [
+      { id: "a", text: "Yes — any fire extinguisher will work" },
+      { id: "b", text: "No — the extinguisher must be rated specifically for electrical fires" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.5",
+  },
+  47: {
+    id: 147,
+    topic: "non-beam-hazards",
+    difficulty: "hard",
+    questionText:
+      "A custom laser system uses a 48V power supply. Are electrical control measures required?",
+    options: [
+      { id: "a", text: "Yes — any circuit requires control measures" },
+      { id: "b", text: "No — electrical control measures are required only for circuits exceeding 50 volts" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.4",
+  },
+  48: {
+    id: 148,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "A laser system has exposed wiring with no enclosure, no grounding, and no indicator lights. Which electrical safety controls are missing?",
+    options: [
+      { id: "a", text: "Only grounding is needed" },
+      { id: "b", text: "Only enclosures are needed" },
+      { id: "c", text: "All three — enclosures, grounding, and indicator lights" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §7.4.3",
+  },
+  49: {
+    id: 149,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "A safety review identifies that a high-power laser system may emit X-rays. Is this considered a non-beam hazard?",
+    options: [
+      { id: "a", text: "No — X-rays are unrelated to laser systems" },
+      { id: "b", text: "Yes — non-laser radiation hazards include radio waves, X-rays, thermal radiation, and ionizing radiation" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.6",
+  },
+  50: {
+    id: 150,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "An exposed pump lamp on a laser system emits UV radiation. What long-term health risk should the LSO address?",
+    options: [
+      { id: "a", text: "Hearing loss" },
+      { id: "b", text: "Cataracts from chronic UV exposure" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.6.1",
+  },
+  51: {
+    id: 151,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "A piece of cardboard is accidentally left in the beam path of a Class 4 laser. What hazard does this create?",
+    options: [
+      { id: "a", text: "No hazard — cardboard absorbs laser light harmlessly" },
+      { id: "b", text: "A fire hazard — Class 4 beams can ignite flammable materials" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.5",
+  },
+  52: {
+    id: 152,
+    topic: "non-beam-hazards",
+    difficulty: "hard",
+    questionText:
+      "A laser cutting system is upgraded from a fixed beam path to a robotic arm delivery. How does this affect the NHZ?",
+    options: [
+      { id: "a", text: "The NHZ stays the same since the laser power hasn't changed" },
+      { id: "b", text: "The NHZ increases because the beam can now reach a larger area" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.7",
+  },
+  53: {
+    id: 153,
+    topic: "non-beam-hazards",
+    difficulty: "hard",
+    questionText:
+      "Two different compressed gases used in a laser system are stored together in the same cabinet. Is this acceptable?",
+    options: [
+      { id: "a", text: "Yes — as long as both containers are properly sealed" },
+      { id: "b", text: "No — different gases must be stored separately" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.3.2",
+  },
+  54: {
+    id: 154,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "An operator complains of wrist pain from repetitive alignment procedures. Is this within the LSO's scope of responsibility?",
+    options: [
+      { id: "a", text: "No — ergonomics is not a laser safety concern" },
+      { id: "b", text: "Yes — the LSO should consider ergonomics of SOPs to reduce repetitive injury" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.7.2",
+  },
+  55: {
+    id: 155,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "A laser workstation has only 1 foot of clearance on each side, with cables on the floor. Is this workspace adequate?",
+    options: [
+      { id: "a", text: "Yes — 1 foot of clearance is sufficient" },
+      { id: "b", text: "No — at least 3 feet of clearance is recommended and the workspace must be free of obstacles" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.7.1",
+  },
+  56: {
+    id: 156,
+    topic: "non-beam-hazards",
+    difficulty: "medium",
+    questionText:
+      "An old laser system is no longer needed. A technician suggests throwing it in the dumpster. Is this appropriate?",
+    options: [
+      { id: "a", text: "Yes — it can be disposed of like any other electronic waste" },
+      { id: "b", text: "No — laser systems contain hazardous materials and should be returned to the manufacturer" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.8",
+  },
+  57: {
+    id: 157,
+    topic: "non-beam-hazards",
+    difficulty: "easy",
+    questionText:
+      "A metal surface inside a laser controlled area reaches 60°C during operation. Are any safety measures required?",
+    options: [
+      { id: "a", text: "No — this is a normal operating temperature" },
+      { id: "b", text: "Yes — engineering controls and a warning sign are required for surfaces exceeding 50°C" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §7.4.2",
   },
 };
 
