@@ -80,6 +80,19 @@ const QUESTION_NOTES: Record<number, string> = {
   22: `Diffuse reflection comes from rough surfaces, and specular reflection comes from smooth surfaces. Diffuse reflection poses a fire hazard, while specular reflection poses an eye exposure hazard since it induces unexpected beam paths.`,
 
   23: `Diffuse reflection comes from rough surfaces, and specular reflection comes from smooth surfaces. Diffuse reflection poses a fire hazard, while specular reflection poses an eye exposure hazard since it induces unexpected beam paths.`,
+
+  // ── Control Measures (Q24–Q41) ──────────────────────────────────────
+  24: `The LSO is responsible for training anyone who might come in contact with the laser system.`,
+
+  25: `Class 4 lasers require all of the same control measures as Class 3B, but also pose a risk to the surrounding volume by producing plasma radiation or other air contaminants. Both Class 3B and Class 4 require a supervisor during operation.`,
+
+  26: `Laser Control Areas should include warning signs, classification labels, interlocks, and protective enclosures.`,
+
+  29: `For beam paths that are enclosed, hazard evaluation should be performed at every accessible point where light exits the enclosure.`,
+
+  33: `Laser safety goggles are wavelength specific. Look at the label on the goggles to see their OD number within a wavelength range.`,
+
+  34: `Optical Density numbers are measured on a logarithmic scale and are typically in integer number indicating the orders of magnitude of blockage of the beam. For example, a set of laser safety goggles with an OD number of 1 allows only 10% of the light to enter. An OD number of 2 allows only 1% of the light to enter, and so on.`,
 };
 
 /**
@@ -394,6 +407,246 @@ const REPHRASED_QUESTIONS: Record<number, Question> = {
     ],
     correctOptionId: "b",
     ansiRef: "Z136.1 §3.4.2",
+  },
+
+  // ── Control Measures (Q24–Q41) ──────────────────────────────────────
+  24: {
+    id: 124,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A visitor wants to observe a Class 4 laser operation. Does the LSO have any training obligation toward this visitor?",
+    options: [
+      { id: "a", text: "No — visitors are not the LSO's responsibility" },
+      { id: "b", text: "Yes — the LSO is responsible for training anyone who may come in contact with the laser system, including visitors" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.1",
+  },
+  25: {
+    id: 125,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "A facility operates a Class 3B laser. Is a supervisor required during its operation?",
+    options: [
+      { id: "a", text: "No — only Class 4 lasers need supervision" },
+      { id: "b", text: "Yes — both Class 3B and Class 4 require a supervisor during operation" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.1",
+  },
+  26: {
+    id: 126,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "A laser controlled area has warning signs and interlocks, but no classification labels or protective enclosures. Is it compliant?",
+    options: [
+      { id: "a", text: "Yes — signs and interlocks are sufficient" },
+      { id: "b", text: "No — it must also include classification labels and protective enclosures" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.5",
+  },
+  27: {
+    id: 127,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A Class 4 laser has a push-button power switch but no key-operated master switch. Does this meet requirements?",
+    options: [
+      { id: "a", text: "Yes — any power switch is acceptable" },
+      { id: "b", text: "No — Class 3B and Class 4 systems require a key-operated master switch" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.10",
+  },
+  28: {
+    id: 128,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A viewing window on a laser enclosure allows the full beam intensity to pass through. Is this acceptable?",
+    options: [
+      { id: "a", text: "Yes — viewing windows are just for observation" },
+      { id: "b", text: "No — viewing windows must reduce transmitted light to below the MPE" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.7",
+  },
+  29: {
+    id: 129,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "An LSO performs a hazard evaluation only at the final output of an enclosed beam path system. Is this sufficient?",
+    options: [
+      { id: "a", text: "Yes — only the output matters for enclosed systems" },
+      { id: "b", text: "No — evaluation must be done at every accessible point where light exits the enclosure" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.5",
+  },
+  30: {
+    id: 130,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "An EMO switch is installed only inside the laser room. Is this adequate for emergency response?",
+    options: [
+      { id: "a", text: "Yes — the operator inside can handle emergencies" },
+      { id: "b", text: "No — EMO switches must be accessible both inside and outside the laser area" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.10.2",
+  },
+  31: {
+    id: 131,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A laser controlled area has a warning sign but no flashing light or audible alarm. Is the sign complete?",
+    options: [
+      { id: "a", text: "Yes — a sign alone is sufficient" },
+      { id: "b", text: "No — warning signs should include either a flashing light or an audible alarm" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.5.1",
+  },
+  32: {
+    id: 132,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "An LSO creates an alignment SOP that includes training on alignment steps but omits failure mode mitigation. Is this SOP complete?",
+    options: [
+      { id: "a", text: "Yes — training on steps is the key requirement" },
+      { id: "b", text: "No — alignment SOPs must also include failure mode mitigation methods and Class 1 sources for simulation" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.2.1",
+  },
+  33: {
+    id: 133,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A technician grabs any available pair of laser goggles without checking the label. Could this be dangerous?",
+    options: [
+      { id: "a", text: "No — all laser goggles protect against all wavelengths" },
+      { id: "b", text: "Yes — goggles are wavelength-specific and the wrong pair may offer no protection" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6.2",
+  },
+  34: {
+    id: 134,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "A pair of laser safety goggles has an OD rating of 3 for a specific wavelength. What percentage of that laser light passes through?",
+    options: [
+      { id: "a", text: "10% (1/10th)" },
+      { id: "b", text: "1% (1/100th)" },
+      { id: "c", text: "0.1% (1/1000th)" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §4.6.2.1",
+  },
+  35: {
+    id: 135,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "A worker wears laser goggles but no lab coat or gloves while operating a Class 4 laser. Are they fully protected?",
+    options: [
+      { id: "a", text: "Yes — goggles are the only PPE required" },
+      { id: "b", text: "No — full PPE includes goggles, lab coats or smocks, and gloves" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6",
+  },
+  36: {
+    id: 136,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "The LSO asks a laser operator to buy their own safety goggles. Is this the correct responsibility assignment?",
+    options: [
+      { id: "a", text: "Yes — operators should purchase their own PPE" },
+      { id: "b", text: "No — the employer is responsible for purchasing PPE" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6.1",
+  },
+  37: {
+    id: 137,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "Laser safety goggles in the lab are scratched and have degraded OD ratings. Whose responsibility is it to inspect and replace them?",
+    options: [
+      { id: "a", text: "The employer" },
+      { id: "b", text: "The Laser Safety Officer (LSO)" },
+      { id: "c", text: "The individual operator" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6.1",
+  },
+  38: {
+    id: 138,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "An operator enters a laser controlled area without putting on the required goggles. Who is at fault for not wearing PPE?",
+    options: [
+      { id: "a", text: "The employer" },
+      { id: "b", text: "The LSO" },
+      { id: "c", text: "The operator" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §4.6.1",
+  },
+  39: {
+    id: 139,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "A facility addresses laser hazards by first issuing PPE, then writing procedures, and finally installing enclosures. Is this the correct priority order?",
+    options: [
+      { id: "a", text: "Yes — PPE is the most effective control" },
+      { id: "b", text: "No — the correct hierarchy is engineering controls first, then administrative controls, then PPE" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3",
+  },
+  40: {
+    id: 140,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "A laser warning sign for an LCA displays only the hazard class and LSO contact info. Is the sign complete?",
+    options: [
+      { id: "a", text: "Yes — hazard class and LSO contact are sufficient" },
+      { id: "b", text: "No — it must also include required eyewear OD/wavelength and special precautionary instructions" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.5.3",
+  },
+  41: {
+    id: 141,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "When purchasing a laser cleaning system for outdoor use, why is choosing a reputable manufacturer critical for the LSO?",
+    options: [
+      { id: "a", text: "They offer longer warranties" },
+      { id: "b", text: "They provide verified technical specifications that the LSO needs for proper hazard evaluation" },
+      { id: "c", text: "Their systems are lighter and easier to set up" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.2",
   },
 };
 

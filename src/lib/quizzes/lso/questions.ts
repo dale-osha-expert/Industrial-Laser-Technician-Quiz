@@ -343,4 +343,265 @@ export const BASE_QUESTIONS: Question[] = [
     correctOptionId: "b",
     ansiRef: "Z136.1 §3.4.2",
   },
+
+  // ── Topic: Control Measures (Questions 24–41) ────────────────────────────
+
+  {
+    id: 24,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "Who is the LSO responsible for training?",
+    options: [
+      { id: "a", text: "Laser Operators" },
+      { id: "b", text: "Maintenance/Service Personnel" },
+      { id: "c", text: "Observers/visitors (to a lesser extent)" },
+      { id: "d", text: "All of the above" },
+    ],
+    correctOptionId: "d",
+    ansiRef: "Z136.1 §4.3.1",
+  },
+  {
+    id: 25,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "Which classifications of lasers require a supervisor during operation?",
+    options: [
+      { id: "a", text: "Class 1" },
+      { id: "b", text: "Class 2" },
+      { id: "c", text: "Class 3B & Class 4" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §4.3.1",
+  },
+  {
+    id: 26,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "Laser controlled areas should be fitted with which of the following?",
+    options: [
+      { id: "a", text: "Warning Signs" },
+      { id: "b", text: "Labels with Classification Ratings" },
+      { id: "c", text: "Interlocks" },
+      { id: "d", text: "Protective Enclosures" },
+      { id: "e", text: "All of the above" },
+    ],
+    correctOptionId: "e",
+    ansiRef: "Z136.1 §4.5",
+  },
+  {
+    id: 27,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "True or False? Class 3B and Class 4 lasers systems must be fitted with a key operated master switch (emergency machine off).",
+    options: [
+      { id: "a", text: "True" },
+      { id: "b", text: "False" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §4.3.10",
+  },
+  {
+    id: 28,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "True or False? Viewing windows should diffuse or absorb the amount of transmitted light to ensure the exposure through the window is below the MPE.",
+    options: [
+      { id: "a", text: "True" },
+      { id: "b", text: "False" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §4.3.7",
+  },
+  {
+    id: 29,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "For beam paths that are enclosed, where should hazard evaluation be performed?",
+    options: [
+      { id: "a", text: "Only at the output" },
+      { id: "b", text: "At every accessible point where light exits the enclosure" },
+      { id: "c", text: "One meter from the viewing window" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.5",
+  },
+  {
+    id: 30,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "Emergency Machine Off switches should be fitted where?",
+    options: [
+      { id: "a", text: "Inside the laser area" },
+      { id: "b", text: "Outside of the laser area" },
+      { id: "c", text: "Both, so they can be shut off by the operator or by someone outside" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §4.3.10.2",
+  },
+  {
+    id: 31,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "Laser warning signs should be fitted with which of the following?",
+    options: [
+      { id: "a", text: "Flashing Lights" },
+      { id: "b", text: "Audible Alarms" },
+      { id: "c", text: "Either of the two above" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §4.5.1",
+  },
+  {
+    id: 32,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "Alignment SOPs developed by the LSO should have which of the following?",
+    options: [
+      { id: "a", text: "Failure mode mitigation methods" },
+      { id: "b", text: "Training on alignment steps" },
+      { id: "c", text: "Class 1 sources for simulation of alignment steps" },
+      { id: "d", text: "All of the above" },
+    ],
+    correctOptionId: "d",
+    ansiRef: "Z136.1 §4.3.2.1",
+  },
+  {
+    id: 33,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "True or False? Laser safety goggles work for all wavelength ranges and power ratings.",
+    options: [
+      { id: "a", text: "True" },
+      { id: "b", text: "False" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6.2",
+  },
+  {
+    id: 34,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "An OD number of 1 corresponds to which throughput percentage?",
+    options: [
+      { id: "a", text: "1% (1/100th)" },
+      { id: "b", text: "10% (1/10th)" },
+      { id: "c", text: "50% (1/2)" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6.2.1",
+  },
+  {
+    id: 35,
+    topic: "control-measures",
+    difficulty: "easy",
+    questionText:
+      "Personal protective equipment includes which of the following?",
+    options: [
+      { id: "a", text: "Laser safety goggles" },
+      { id: "b", text: "Smocks or lab coats" },
+      { id: "c", text: "Gloves" },
+      { id: "d", text: "All of the above" },
+    ],
+    correctOptionId: "d",
+    ansiRef: "Z136.1 §4.6",
+  },
+  {
+    id: 36,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "Who is responsible for purchasing the PPE?",
+    options: [
+      { id: "a", text: "Employer" },
+      { id: "b", text: "LSO" },
+      { id: "c", text: "Operator" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §4.6.1",
+  },
+  {
+    id: 37,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "Who is responsible for maintaining the PPE?",
+    options: [
+      { id: "a", text: "Employer" },
+      { id: "b", text: "LSO" },
+      { id: "c", text: "Operator" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.6.1",
+  },
+  {
+    id: 38,
+    topic: "control-measures",
+    difficulty: "medium",
+    questionText:
+      "Who is responsible for wearing the PPE?",
+    options: [
+      { id: "a", text: "Employer" },
+      { id: "b", text: "LSO" },
+      { id: "c", text: "Operator" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §4.6.1",
+  },
+  {
+    id: 39,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "Which of the following correctly reflects the hierarchy of control measures for laser safety, from most to least preferred?",
+    options: [
+      { id: "a", text: "PPE → Administrative Controls → Engineering Controls" },
+      { id: "b", text: "Engineering Controls → Administrative Controls → PPE" },
+      { id: "c", text: "Administrative Controls → PPE → Engineering Controls" },
+      { id: "d", text: "PPE → Engineering Controls → Administrative Controls" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3",
+  },
+  {
+    id: 40,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "Which of the following are required on a laser warning sign message panel for a Laser Controlled Area (LCA)?",
+    options: [
+      { id: "a", text: "The hazard class of the area" },
+      { id: "b", text: "The required optical density and wavelength(s) of laser protective eyewear" },
+      { id: "c", text: "The name and contact information for the Laser Safety Officer (LSO) or supervisor" },
+      { id: "d", text: "Special precautionary instructions, such as \"Do Not Enter When Light is Illuminated\"" },
+      { id: "e", text: "All of the above" },
+    ],
+    correctOptionId: "e",
+    ansiRef: "Z136.1 §4.5.3",
+  },
+  {
+    id: 41,
+    topic: "control-measures",
+    difficulty: "hard",
+    questionText:
+      "Which of the following is the most important reason to select a reputable manufacturer when purchasing a laser cleaning system for outdoor use?",
+    options: [
+      { id: "a", text: "They offer better pricing on replacement parts" },
+      { id: "b", text: "Their equipment is easier to transport" },
+      { id: "c", text: "They provide verified technical specifications essential for hazard evaluation" },
+      { id: "d", text: "Their systems operate at lower power levels" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §4.2",
+  },
 ];
