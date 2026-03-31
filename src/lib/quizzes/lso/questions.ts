@@ -179,4 +179,168 @@ export const BASE_QUESTIONS: Question[] = [
     correctOptionId: "a",
     ansiRef: "Z136.1 §4.1.3",
   },
+
+  // ── Topic: Hazard Evaluation (Questions 13–23) ───────────────────────────
+
+  {
+    id: 13,
+    topic: "hazard-evaluation",
+    difficulty: "medium",
+    questionText:
+      "The hazard classification level of a laser system is based on what?",
+    options: [
+      { id: "a", text: "Its capability of inducing damage onto any personal, operators or viewers" },
+      { id: "b", text: "Level of radiation that is accessible during operation" },
+      { id: "c", text: "The beam environment and whether or not it is enclosed" },
+      { id: "d", text: "The personnel who may be exposed to it" },
+      { id: "e", text: "All of the above" },
+    ],
+    correctOptionId: "e",
+    ansiRef: "Z136.1 §3.3",
+  },
+  {
+    id: 14,
+    topic: "hazard-evaluation",
+    difficulty: "medium",
+    questionText:
+      "The hazard evaluation should be performed at what operating condition of the laser?",
+    options: [
+      { id: "a", text: "The minimum operating radiant output" },
+      { id: "b", text: "The nominal operating radiant output" },
+      { id: "c", text: "The maximum operating radiant output" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §3.3.1",
+  },
+  {
+    id: 15,
+    topic: "hazard-evaluation",
+    difficulty: "hard",
+    questionText:
+      "Which factor is NOT an essential optical measurement metric for determining laser hazard classification?",
+    options: [
+      { id: "a", text: "Wavelength(s) of operation" },
+      { id: "b", text: "Radiant exposure" },
+      { id: "c", text: "Electrical system power consumption" },
+      { id: "d", text: "Output divergence angle" },
+      { id: "e", text: "Exposure aperture size" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §3.3.2",
+  },
+  {
+    id: 16,
+    topic: "hazard-evaluation",
+    difficulty: "easy",
+    questionText:
+      "True or False? For CW Lasers, continuous-wave output power and exposure duration determine the hazard classification.",
+    options: [
+      { id: "a", text: "True" },
+      { id: "b", text: "False" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §3.3.3",
+  },
+  {
+    id: 17,
+    topic: "hazard-evaluation",
+    difficulty: "medium",
+    questionText:
+      "Which of the following are essential metrics for pulsed lasers?",
+    options: [
+      { id: "a", text: "Pulse energy" },
+      { id: "b", text: "Pulse duration" },
+      { id: "c", text: "Pulse repetition frequency" },
+      { id: "d", text: "All of the above" },
+    ],
+    correctOptionId: "d",
+    ansiRef: "Z136.1 §3.3.4",
+  },
+  {
+    id: 18,
+    topic: "hazard-evaluation",
+    difficulty: "medium",
+    questionText:
+      "What defines the boundaries of the Nominal Hazard Zone (NHZ)?",
+    options: [
+      { id: "a", text: "The area 3 feet surrounding the laser system" },
+      { id: "b", text: "The control measures implemented by the LSO" },
+      { id: "c", text: "The extents of the building in which the laser is housed" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §4.3.9",
+  },
+  {
+    id: 19,
+    topic: "hazard-evaluation",
+    difficulty: "hard",
+    questionText:
+      "Which of the following is NOT critical to evaluating the NHZ?",
+    options: [
+      { id: "a", text: "Determining all possible beam paths" },
+      { id: "b", text: "Determining all sources of specular reflection" },
+      { id: "c", text: "Determining the MPE of diffuse materials" },
+      { id: "d", text: "Determining the minimum operating threshold of the laser" },
+      { id: "e", text: "Determining how often the operator will be inside the NHZ" },
+      { id: "f", text: "Determining whether collecting optics will be available" },
+    ],
+    correctOptionId: "d",
+    ansiRef: "Z136.1 §4.3.9.1",
+  },
+  {
+    id: 20,
+    topic: "hazard-evaluation",
+    difficulty: "easy",
+    questionText:
+      "Rough surfaces produce which type of reflection?",
+    options: [
+      { id: "a", text: "Diffuse" },
+      { id: "b", text: "Specular" },
+      { id: "c", text: "Lambertian" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §3.4.1",
+  },
+  {
+    id: 21,
+    topic: "hazard-evaluation",
+    difficulty: "easy",
+    questionText:
+      "Smooth surfaces produce which type of reflection?",
+    options: [
+      { id: "a", text: "Diffuse" },
+      { id: "b", text: "Specular" },
+      { id: "c", text: "Lambertian" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §3.4.2",
+  },
+  {
+    id: 22,
+    topic: "hazard-evaluation",
+    difficulty: "medium",
+    questionText:
+      "Which type of reflection poses a fire hazard?",
+    options: [
+      { id: "a", text: "Diffuse" },
+      { id: "b", text: "Specular" },
+      { id: "c", text: "Lambertian" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §3.4.1",
+  },
+  {
+    id: 23,
+    topic: "hazard-evaluation",
+    difficulty: "medium",
+    questionText:
+      "Which type of reflection poses an eye hazard?",
+    options: [
+      { id: "a", text: "Diffuse" },
+      { id: "b", text: "Specular" },
+      { id: "c", text: "Lambertian" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §3.4.2",
+  },
 ];

@@ -7,6 +7,7 @@ const TOPIC_LABELS: Record<Topic, string> = {
   "control-measures": "Control Measures",
   "non-beam-hazards": "Non-Beam Hazards",
   "eye-skin-exposure": "Eye & Skin Exposure",
+  "hazard-evaluation": "Hazard Evaluation",
 };
 
 interface QuestionCardProps {

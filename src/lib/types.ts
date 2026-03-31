@@ -8,7 +8,8 @@ export type Topic =
   | "laser-basics"
   | "control-measures"
   | "non-beam-hazards"
-  | "eye-skin-exposure";
+  | "eye-skin-exposure"
+  | "hazard-evaluation";
 
 /** Difficulty tiers map to the question progression */
 export type Difficulty = "easy" | "medium" | "hard";

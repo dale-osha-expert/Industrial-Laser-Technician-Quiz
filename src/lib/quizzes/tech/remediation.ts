@@ -47,6 +47,8 @@ The Maximum Permissible Exposure (MPE) limits for eyes and skin are published by
 **Eye hazards** are the primary concern. When a collimated laser beam enters the eye, the cornea and lens focus it onto the retina, creating a very small spot with extremely high energy density. This can cause serious photochemical damage. The retinal hazard region spans from 400 nm to 1400 nm. For **visible lasers** (400–700 nm), the maximum exposure duration is 0.25 seconds for CW lasers, based on the eye's aversion response. For **near-IR lasers** (700–1400 nm), the maximum exposure duration extends to 10 seconds because the eye's natural movements and impulse to avert provide some protection even though the beam is invisible.
 
 **Skin exposure** poses a thermal damage risk rather than a photochemical one. While generally less severe than eye injuries, skin burns from high-power lasers can be significant. Protective clothing, including smocks and gloves, helps reduce skin exposure risk. Both eye and skin MPE limits must be evaluated during the hazard analysis of any Class 3B or Class 4 laser system.`,
+
+  "hazard-evaluation": "",
 };
 
 /**
