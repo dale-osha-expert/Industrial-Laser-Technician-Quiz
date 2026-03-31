@@ -24,8 +24,27 @@ The **Nominal Hazard Zone (NHZ)** is defined by the control measures implemented
 
 **Diffuse reflection** occurs from rough surfaces and poses a fire hazard as energy is scattered broadly. **Specular reflection** occurs from smooth surfaces and poses an eye hazard because it creates unexpected concentrated beam paths. Understanding both reflection types is critical to proper hazard evaluation and NHZ determination.`,
 
-  "control-measures": "",
-  "non-beam-hazards": "",
+  "control-measures": `**Control Measures — ANSI Z136.1**
+
+Engineering controls are the first line of defense and the most reliable. **Protective housings** must prevent human access to laser radiation above the applicable MPE during normal operation and maintenance. **Beam enclosures** fully contain the beam path, and **interlocks** disable the laser when a housing panel or door is opened — defeat of interlocks requires LSO authorization and temporary alternative controls.
+
+**Warning systems** include audible alarms that sound before a Class 3B or 4 laser fires, giving personnel time to don PPE or leave the area. **Beam stops and attenuators** terminate or reduce the beam at the end of its useful path, preventing stray radiation. The **beam path** should be kept below or above standing or seated eye level to minimize accidental ocular exposure. Optical tables must be maintained at levels that keep beams away from eye height.
+
+**Administrative controls** complement engineering controls but never replace them. These include Standard Operating Procedures (SOPs) — which the LSO must approve for every Class 3B/4 system — and restricting laser area access to authorized personnel only. Laser Controlled Areas (LCAs) require posted warning signs, limited entry points, and door interlocks or equivalent barriers.
+
+**Personal Protective Equipment (PPE)** is the last layer. **Laser protective eyewear** must be wavelength-matched and have an adequate Optical Density (OD) for the specific laser. OD is logarithmic: OD 1 blocks 90% of incident light, OD 2 blocks 99%, OD 3 blocks 99.9%. The LSO determines the required OD based on MPE calculations and the laser's output parameters. Eyewear must be inspected for damage regularly and replaced if degraded.`,
+
+  "non-beam-hazards": `**Non-Beam Hazards — ANSI Z136.1**
+
+Non-beam hazards are risks associated with laser operations that do not come from the beam itself. These hazards can be just as dangerous — or more so — than direct beam exposure, and the LSO must address them as part of the overall safety program.
+
+**Electrical hazards** are the most common cause of fatalities in laser environments. High-voltage power supplies, capacitor banks, and exposed conductors can deliver lethal shocks. Laser technicians must follow lockout/tagout (LOTO) procedures before servicing equipment, and only qualified personnel should work on energized circuits.
+
+**Laser-Generated Air Contaminants (LGACs)** are produced when high-power lasers interact with target materials. These include particulates, fumes, and gases that may be toxic or carcinogenic — especially when cutting, welding, or ablating metals, plastics, or biological tissue. Adequate ventilation, local exhaust systems, and respiratory protection are required controls.
+
+**Fire hazards** exist because Class 4 lasers can ignite flammable materials, solvents, and even clothing. Work areas must be kept free of combustible materials, and fire extinguishers must be readily accessible. **Explosion risks** arise when lasers are used near flammable gases or volatile solvents.
+
+**Plasma radiation** from high-power laser interactions with targets can produce UV and visible radiation intense enough to cause eye and skin injury to nearby personnel. **Compressed gases** used in laser systems (assist gases, cooling) introduce asphyxiation and high-pressure hazards. **Cryogenic materials** used for cooling pose frostbite and oxygen displacement risks. The LSO must evaluate all non-beam hazards specific to each laser installation and ensure appropriate controls are in place.`,
   "eye-skin-exposure": "",
 };
 
