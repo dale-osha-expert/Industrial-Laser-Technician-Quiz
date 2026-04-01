@@ -831,4 +831,167 @@ export const BASE_QUESTIONS: Question[] = [
     correctOptionId: "a",
     ansiRef: "Z136.1 §7.4.2",
   },
+
+  // ── Eye & Skin Exposure (Q58-Q68) ──────────────────────────────────
+  {
+    id: 58,
+    topic: "eye-skin-exposure",
+    difficulty: "easy",
+    questionText:
+      "Where can you find the maximum permissible exposure (MPE) limits?",
+    options: [
+      { id: "a", text: "OSHA's website" },
+      { id: "b", text: "The American National Standards Institute (ANSI)" },
+      { id: "c", text: "Physics textbooks" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.1",
+  },
+  {
+    id: 59,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "Which beam characteristics are critical for measuring the MPE?",
+    options: [
+      { id: "a", text: "Aperture Size" },
+      { id: "b", text: "Source Distance" },
+      { id: "c", text: "Outgoing Cone Angle" },
+      { id: "d", text: "Wavelength" },
+      { id: "e", text: "Exposure Time" },
+      { id: "f", text: "All of the above" },
+    ],
+    correctOptionId: "f",
+    ansiRef: "Z136.1 §8.2",
+  },
+  {
+    id: 60,
+    topic: "eye-skin-exposure",
+    difficulty: "hard",
+    questionText: "What cone angle constitutes a collimated beam?",
+    options: [
+      { id: "a", text: "Less than 1 degree" },
+      { id: "b", text: "Less than 1.5 mrad (0.1 degree)" },
+      { id: "c", text: "Less than 10 degrees" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.2.1",
+  },
+  {
+    id: 61,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText: "What happens when collimated beams enter the eye?",
+    options: [
+      { id: "a", text: "The eye's pupil blocks the beam." },
+      { id: "b", text: "The viewer instinctively blinks." },
+      {
+        id: "c",
+        text: "The beam forms a very small spot with high energy density.",
+      },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §8.2.1",
+  },
+  {
+    id: 62,
+    topic: "eye-skin-exposure",
+    difficulty: "easy",
+    questionText: "Which wavelengths constitute the visible range?",
+    options: [
+      { id: "a", text: "0–400 nm" },
+      { id: "b", text: "400–700 nm" },
+      { id: "c", text: "700–1400 nm" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.3",
+  },
+  {
+    id: 63,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "What type of beam profile do diverging lasers typically have?",
+    options: [
+      { id: "a", text: "Newtonian" },
+      { id: "b", text: "Cartesian" },
+      { id: "c", text: "Gaussian" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §8.2.2",
+  },
+  {
+    id: 64,
+    topic: "eye-skin-exposure",
+    difficulty: "hard",
+    questionText:
+      "Which of the following is NOT necessary for measuring a wide spectrum laser source?",
+    options: [
+      { id: "a", text: "Consider the thermal risks of each wavelength." },
+      {
+        id: "b",
+        text: "Consider the photochemical risks of each wavelength.",
+      },
+      { id: "c", text: "Measure the wavelengths separately." },
+      {
+        id: "d",
+        text: "Treat the MPE's of each wavelength as additive.",
+      },
+      { id: "e", text: "Measure only the highest energy wavelength." },
+    ],
+    correctOptionId: "e",
+    ansiRef: "Z136.1 §8.2.3",
+  },
+  {
+    id: 65,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "What is the maximum exposure duration for near IR lasers (700–1400 nm)?",
+    options: [
+      { id: "a", text: "0.25 seconds" },
+      { id: "b", text: "1 second" },
+      { id: "c", text: "10 seconds" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §8.3.1",
+  },
+  {
+    id: 66,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "What is the maximum exposure duration for visible lasers (400–700 nm)?",
+    options: [
+      { id: "a", text: "0.25 seconds" },
+      { id: "b", text: "1 second" },
+      { id: "c", text: "10 seconds" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §8.3.2",
+  },
+  {
+    id: 67,
+    topic: "eye-skin-exposure",
+    difficulty: "easy",
+    questionText: "Skin exposure poses what type of risk?",
+    options: [
+      { id: "a", text: "Thermal" },
+      { id: "b", text: "Photochemical" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §8.4",
+  },
+  {
+    id: 68,
+    topic: "eye-skin-exposure",
+    difficulty: "easy",
+    questionText: "Eye exposure poses what type of risk?",
+    options: [
+      { id: "a", text: "Thermal" },
+      { id: "b", text: "Photochemical" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.4",
+  },
 ];

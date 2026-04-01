@@ -45,7 +45,17 @@ Non-beam hazards are risks associated with laser operations that do not come fro
 **Fire hazards** exist because Class 4 lasers can ignite flammable materials, solvents, and even clothing. Work areas must be kept free of combustible materials, and fire extinguishers must be readily accessible. **Explosion risks** arise when lasers are used near flammable gases or volatile solvents.
 
 **Plasma radiation** from high-power laser interactions with targets can produce UV and visible radiation intense enough to cause eye and skin injury to nearby personnel. **Compressed gases** used in laser systems (assist gases, cooling) introduce asphyxiation and high-pressure hazards. **Cryogenic materials** used for cooling pose frostbite and oxygen displacement risks. The LSO must evaluate all non-beam hazards specific to each laser installation and ensure appropriate controls are in place.`,
-  "eye-skin-exposure": "",
+  "eye-skin-exposure": `**Eye & Skin Exposure — ANSI Z136.1**
+
+The **Maximum Permissible Exposure (MPE)** is the highest level of laser radiation to which the eye or skin may be exposed without adverse effects. MPE limits are published by the **American National Standards Institute (ANSI)** in Z136.1 and vary by wavelength, exposure duration, and laser type.
+
+Measuring MPE requires knowledge of several beam characteristics: **aperture size, source distance, outgoing cone angle, wavelength, and exposure time**. A beam is considered **collimated** if its divergence angle is less than **1.5 mrad (0.1°)** — these are treated as point sources. When a collimated beam enters the eye, the lens focuses it into a very small spot on the retina with extremely high energy density, causing serious photochemical damage.
+
+The **visible range** spans 400–700 nm. The broader **retinal hazard region** extends from 400 nm to 1400 nm. For **near-IR lasers (700–1400 nm)**, the maximum exposure duration used in MPE calculations is **10 seconds**, because the eye's natural movements and aversion impulse provide some protection. For **visible CW lasers (400–700 nm)**, the maximum exposure duration drops to **0.25 seconds** due to the blink/aversion reflex.
+
+**Diverging lasers** (uncollimated beams, laser arrays, diffuse sources) typically have a **Gaussian beam profile**, and MPE calculations must account for this intensity distribution. For **wide-spectrum sources** with multiple wavelengths, the LSO must consider the thermal and photochemical risk of each wavelength, measure each separately, and treat the MPEs as **additive** — measuring only the highest-energy wavelength is insufficient.
+
+**Skin exposure** poses primarily a **thermal** damage risk, while **eye exposure** poses primarily a **photochemical** damage risk. Both must be evaluated in the hazard analysis.`,
 };
 
 /**
@@ -141,6 +151,27 @@ const QUESTION_NOTES: Record<number, string> = {
   55: `The workspace should also be easily accessible and not contain hindrances to personnel moving around in the NHZ. Such hindrances include loose wires on the ground, awkwardly placed enclosures, or other impediments to their movement. A good rule of thumb is to have at least 3 feet of space around the optical table or laser system enclosure.`,
 
   56: `Special care should be given to the disposal of laser systems. They contain harmful chemicals and hazardous electrical components that cannot be disposed of. Whenever possible, unused lasers should be stored safely or returned to the manufacturer.`,
+
+  // ── Eye & Skin Exposure (Q58–Q68) ──────────────────────────────────
+  58: `Refer to the American National Standards Institute for the maximum permissible exposure limits for eyes and skin. There are different ratings for specific wavelengths and laser types.`,
+
+  60: `A beam is considered collimated if its divergence angle is less than 1.5 mrad (0.1 deg). These are considered to be point sources.`,
+
+  61: `Collimated laser beams create a highly focused spot on the retina and can cause serious photochemical damage.`,
+
+  62: `The retinal hazard region spans from 400 nm to 1400 nm.`,
+
+  63: `For uncollimated beams, such as laser arrays, diffuse sources, or expanding beams, the calculations must consider the Gaussian profiles of the outgoing light.`,
+
+  64: `With wide spectrum sources with multiple wavelengths, the LSO must consider the thermal & photochemical risk of each wavelength. They must also measure each wavelength separately and treat the MPE of each as additive.`,
+
+  65: `For near IR lasers (between 700 and 1400 nm), the eye's natural aversion response is considered. The maximum exposure duration is 10 seconds, due to the fact that the eye's natural movements and impulse to avert will protect the viewer if retinal damage starts to take place.`,
+
+  66: `For visible lasers (between 400 and 700 nm), the maximum exposure duration drops down to 0.25 seconds for CW lasers.`,
+
+  67: `Skin exposure to laser beams pose a thermal damage risk.`,
+
+  68: `Eye exposure to laser beams pose a photochemical damage risk.`,
 };
 
 /**
@@ -908,6 +939,152 @@ const REPHRASED_QUESTIONS: Record<number, Question> = {
     ],
     correctOptionId: "b",
     ansiRef: "Z136.1 §7.4.2",
+  },
+
+  // ── Eye & Skin Exposure (Q58–Q68) ──────────────────────────────────
+  58: {
+    id: 158,
+    topic: "eye-skin-exposure",
+    difficulty: "easy",
+    questionText:
+      "A technician wants to look up the MPE for a 532 nm laser. Which organization publishes the authoritative MPE tables?",
+    options: [
+      { id: "a", text: "OSHA" },
+      { id: "b", text: "ANSI — the American National Standards Institute" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.1",
+  },
+  59: {
+    id: 159,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "An LSO is calculating the MPE for a new laser. Which of the following can be safely ignored?",
+    options: [
+      { id: "a", text: "Wavelength" },
+      { id: "b", text: "Exposure time" },
+      { id: "c", text: "None — aperture size, source distance, cone angle, wavelength, and exposure time are all required" },
+    ],
+    correctOptionId: "c",
+    ansiRef: "Z136.1 §8.2",
+  },
+  60: {
+    id: 160,
+    topic: "eye-skin-exposure",
+    difficulty: "hard",
+    questionText:
+      "A laser beam has a divergence of 0.05 mrad. Is this beam considered collimated?",
+    options: [
+      { id: "a", text: "No — the divergence is too small to be a true collimated beam" },
+      { id: "b", text: "Yes — any divergence less than 1.5 mrad (0.1°) qualifies as collimated" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.2.1",
+  },
+  61: {
+    id: 161,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "A collimated laser beam accidentally enters a worker's eye. Why is this particularly dangerous?",
+    options: [
+      { id: "a", text: "The pupil will dilate, letting in more light" },
+      { id: "b", text: "The eye's lens focuses the collimated beam into an extremely small, high-energy-density spot on the retina" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.2.1",
+  },
+  62: {
+    id: 162,
+    topic: "eye-skin-exposure",
+    difficulty: "easy",
+    questionText:
+      "A laser operates at 550 nm. Does this fall within the visible spectrum?",
+    options: [
+      { id: "a", text: "No — 550 nm is in the ultraviolet range" },
+      { id: "b", text: "Yes — the visible range is 400–700 nm" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.3",
+  },
+  63: {
+    id: 163,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "An LSO is calculating the MPE for a diverging laser diode array. What beam profile must the calculation account for?",
+    options: [
+      { id: "a", text: "Flat-top (uniform)" },
+      { id: "b", text: "Gaussian" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.2.2",
+  },
+  64: {
+    id: 164,
+    topic: "eye-skin-exposure",
+    difficulty: "hard",
+    questionText:
+      "A multi-wavelength laser emits at 532 nm and 1064 nm. An LSO measures only the 1064 nm output since it has more energy. Is this sufficient?",
+    options: [
+      { id: "a", text: "Yes — the highest energy wavelength determines the overall MPE" },
+      { id: "b", text: "No — each wavelength must be measured separately and the MPEs treated as additive" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.2.3",
+  },
+  65: {
+    id: 165,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "A near-IR laser at 900 nm accidentally illuminates a worker's eye. For MPE calculations, what maximum exposure duration applies?",
+    options: [
+      { id: "a", text: "0.25 seconds" },
+      { id: "b", text: "10 seconds — the eye's natural aversion and movement provide some protection in the near-IR range" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.3.1",
+  },
+  66: {
+    id: 166,
+    topic: "eye-skin-exposure",
+    difficulty: "medium",
+    questionText:
+      "A CW visible laser at 635 nm is being evaluated. What maximum exposure duration is used for the MPE calculation?",
+    options: [
+      { id: "a", text: "0.25 seconds — the blink reflex limits exposure for visible CW lasers" },
+      { id: "b", text: "10 seconds" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §8.3.2",
+  },
+  67: {
+    id: 167,
+    topic: "eye-skin-exposure",
+    difficulty: "easy",
+    questionText:
+      "A Class 4 laser beam grazes a technician's forearm. What type of damage is most likely?",
+    options: [
+      { id: "a", text: "Thermal burn — skin exposure is primarily a thermal risk" },
+      { id: "b", text: "Photochemical damage" },
+    ],
+    correctOptionId: "a",
+    ansiRef: "Z136.1 §8.4",
+  },
+  68: {
+    id: 168,
+    topic: "eye-skin-exposure",
+    difficulty: "easy",
+    questionText:
+      "A worker's eye is briefly exposed to a laser beam. What is the primary damage mechanism for eye exposure?",
+    options: [
+      { id: "a", text: "Thermal" },
+      { id: "b", text: "Photochemical — eye exposure is primarily a photochemical risk" },
+    ],
+    correctOptionId: "b",
+    ansiRef: "Z136.1 §8.4",
   },
 };
 

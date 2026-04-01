@@ -23,7 +23,7 @@ const QUIZZES: QuizEntry[] = [
     description:
       "Assess your readiness as a Laser Safety Officer — responsibilities, hazard evaluation, and program management.",
     href: "/industrial-lso-quiz",
-    questionCount: 57,
+    questionCount: 68,
   },
 ];
 
