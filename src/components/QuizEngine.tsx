@@ -133,12 +133,18 @@ export default function QuizEngine({ config }: QuizEngineProps) {
   }, [state.currentQuestionIndex, TOTAL_QUESTIONS]);
 
   const handleRemediationIncorrect = useCallback(() => {
+    // Briefly close the modal so React unmounts it, then reopen with the same
+    // payload — this resets the modal's internal phase back to the lesson.
     setState((prev) => ({
       ...prev,
-      remediationPayload: prev.remediationPayload
-        ? { ...prev.remediationPayload }
-        : null,
+      isRemediating: false,
     }));
+    requestAnimationFrame(() => {
+      setState((prev) => ({
+        ...prev,
+        isRemediating: true,
+      }));
+    });
   }, []);
 
   const handleRestart = useCallback(() => {
