@@ -267,11 +267,142 @@
       ],
       "correctOptionId": "e",
       "oshaClause": "Z136.1 §4.5.3"
+    },
+    {
+      "id": 21,
+      "topic": "control-measures",
+      "difficulty": "hard",
+      "questionText": "Which of the following is the most important reason to select a reputable manufacturer when purchasing a laser cleaning system for outdoor use?",
+      "options": [
+        { "id": "a", "text": "They offer better pricing on replacement parts" },
+        { "id": "b", "text": "Their equipment is easier to transport" },
+        { "id": "c", "text": "They provide verified technical specifications essential for hazard evaluation" },
+        { "id": "d", "text": "Their systems operate at lower power levels" }
+      ],
+      "correctOptionId": "c",
+      "oshaClause": "Z136.1 §4.2"
+    },
+    {
+      "id": 22,
+      "topic": "non-beam-hazards",
+      "difficulty": "easy",
+      "questionText": "True or False? Laser radiation is the only source of hazard from the system.",
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correctOptionId": "b",
+      "oshaClause": "Z136.1 §7"
+    },
+    {
+      "id": 23,
+      "topic": "non-beam-hazards",
+      "difficulty": "easy",
+      "questionText": "True or False? Class 4 lasers are capable of releasing hazardous chemicals, plasma, and ions into the air.",
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correctOptionId": "a",
+      "oshaClause": "Z136.1 §7.3"
+    },
+    {
+      "id": 24,
+      "topic": "non-beam-hazards",
+      "difficulty": "medium",
+      "questionText": "What type of electrical component poses a shock hazard?",
+      "options": [
+        { "id": "a", "text": "Resistors" },
+        { "id": "b", "text": "Capacitors" },
+        { "id": "c", "text": "Inductors" }
+      ],
+      "correctOptionId": "b",
+      "oshaClause": "Z136.1 §7.4.1"
+    },
+    {
+      "id": 25,
+      "topic": "non-beam-hazards",
+      "difficulty": "medium",
+      "questionText": "What type of electrical component poses a thermal hazard?",
+      "options": [
+        { "id": "a", "text": "Resistors" },
+        { "id": "b", "text": "Capacitors" },
+        { "id": "c", "text": "Inductors" }
+      ],
+      "correctOptionId": "a",
+      "oshaClause": "Z136.1 §7.4.2"
+    },
+    {
+      "id": 26,
+      "topic": "non-beam-hazards",
+      "difficulty": "easy",
+      "questionText": "True or False? Any fire extinguisher, regardless of its rating, is adequate to maintain safety around a laser system.",
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correctOptionId": "b",
+      "oshaClause": "Z136.1 §7.5"
+    },
+    {
+      "id": 27,
+      "topic": "non-beam-hazards",
+      "difficulty": "hard",
+      "questionText": "Electrical control measures are required for circuits containing what voltage?",
+      "options": [
+        { "id": "a", "text": "9 V" },
+        { "id": "b", "text": "12 V" },
+        { "id": "c", "text": "More than 50 V" }
+      ],
+      "correctOptionId": "c",
+      "oshaClause": "Z136.1 §7.4"
+    },
+    {
+      "id": 28,
+      "topic": "non-beam-hazards",
+      "difficulty": "easy",
+      "questionText": "Which control measures contribute to electrical safety?",
+      "options": [
+        { "id": "a", "text": "Enclosures" },
+        { "id": "b", "text": "Grounding" },
+        { "id": "c", "text": "Indicator Lights" },
+        { "id": "d", "text": "All of the above" }
+      ],
+      "correctOptionId": "d",
+      "oshaClause": "Z136.1 §7.4.3"
+    },
+    {
+      "id": 29,
+      "topic": "non-beam-hazards",
+      "difficulty": "medium",
+      "questionText": "High power lasers pose which type of Non-Laser Radiation hazards?",
+      "options": [
+        { "id": "a", "text": "Radio Waves" },
+        { "id": "b", "text": "X-Rays" },
+        { "id": "c", "text": "Thermal Radiation" },
+        { "id": "d", "text": "Ionizing Radiation" },
+        { "id": "e", "text": "All of the above" }
+      ],
+      "correctOptionId": "e",
+      "oshaClause": "Z136.1 §7.6"
+    },
+    {
+      "id": 30,
+      "topic": "non-beam-hazards",
+      "difficulty": "easy",
+      "questionText": "True or False? UV radiation can cause cataracts over time.",
+      "options": [
+        { "id": "a", "text": "True" },
+        { "id": "b", "text": "False" }
+      ],
+      "correctOptionId": "a",
+      "oshaClause": "Z136.1 §7.6.1"
     }
   ],
   "lessons": {
     "laser-basics": "**Understanding Laser Classifications — ANSI Z136.1**\n\nLasers are classified according to the hazard they present to the human body, primarily the eyes and skin. The classification system defined in ANSI Z136.1 ranges from Class 1 (safest) through Class 4 (most hazardous).\n\n**Class 1** systems are incapable of producing damaging radiation under normal operating conditions — either because their output is inherently low or because a higher-power laser is fully enclosed with appropriate safety controls. **Class 2** lasers emit only visible light (400–700 nm) and rely on the human eye's natural aversion response (blink reflex) to prevent overexposure; they are considered safe as long as that reflex is not deliberately overridden.\n\n**Class 3R** systems present a small risk of eye injury if the beam is viewed directly or via specular (mirror-like) reflection, but diffuse reflections are generally safe. **Class 3B** lasers can cause immediate eye injury from direct or specularly reflected beams. **Class 4** lasers are the most dangerous — they pose hazards to eyes and skin from direct, specular, and even diffuse exposure, can ignite flammable materials, and may generate hazardous plasma radiation and air contaminants.\n\nEmployers bear responsibility for providing PPE and a complete laser safety program. Medical surveillance — including baseline eye exams — should be established, and examinations must occur immediately after any known or suspected laser incident.",
-    "control-measures": "**Laser Control Measures — ANSI Z136.1**\n\nControl measures for laser safety follow a strict hierarchy: engineering controls first, then administrative controls, and finally personal protective equipment (PPE) as the last line of defense.\n\n**Engineering controls** include protective enclosures, interlocks on doors and panels, key-operated master switches, beam stops, and viewing windows that reduce transmitted light below the Maximum Permissible Exposure (MPE). Class 3B and Class 4 systems must have a key-operated master switch and Emergency Machine Off (EMO) buttons located both inside and outside the laser controlled area.\n\n**Administrative controls** include warning signs with flashing lights or audible alarms, standard operating procedures, designated laser controlled areas, and training requirements. Warning sign message panels must display the hazard class, required eyewear OD and wavelength, LSO contact information, and special precautionary instructions.\n\n**PPE** includes laser safety goggles, lab coats or smocks, and gloves. Critically, laser safety goggles are wavelength-specific — each pair has an Optical Density (OD) rating for a particular wavelength range. OD is logarithmic: OD 1 blocks 90% of light (10% throughput), OD 2 blocks 99% (1% throughput), and so on. The employer purchases PPE, the LSO maintains it, and the operator is responsible for wearing it."
+    "control-measures": "**Laser Control Measures — ANSI Z136.1**\n\nControl measures for laser safety follow a strict hierarchy: engineering controls first, then administrative controls, and finally personal protective equipment (PPE) as the last line of defense.\n\n**Engineering controls** include protective enclosures, interlocks on doors and panels, key-operated master switches, beam stops, and viewing windows that reduce transmitted light below the Maximum Permissible Exposure (MPE). Class 3B and Class 4 systems must have a key-operated master switch and Emergency Machine Off (EMO) buttons located both inside and outside the laser controlled area.\n\n**Administrative controls** include warning signs with flashing lights or audible alarms, standard operating procedures, designated laser controlled areas, and training requirements. Warning sign message panels must display the hazard class, required eyewear OD and wavelength, LSO contact information, and special precautionary instructions.\n\n**PPE** includes laser safety goggles, lab coats or smocks, and gloves. Critically, laser safety goggles are wavelength-specific — each pair has an Optical Density (OD) rating for a particular wavelength range. OD is logarithmic: OD 1 blocks 90% of light (10% throughput), OD 2 blocks 99% (1% throughput), and so on. The employer purchases PPE, the LSO maintains it, and the operator is responsible for wearing it.",
+    "non-beam-hazards": "**Non-Beam Hazards — ANSI Z136.1**\n\nLaser radiation is not the only hazard associated with laser systems. Non-beam hazards (NBH) include electrical dangers, chemical exposure, fire risk, non-laser radiation, and mechanical hazards.\n\n**Electrical hazards** are among the most serious. Capacitors in pulsed laser power supplies can retain lethal charge even after the system is powered off. Resistive components generate heat and can cause thermal burns. Electrical control measures are required for circuits exceeding 50 volts, and safety is maintained through proper enclosures, grounding, and power indicator lights.\n\n**Chemical and atmospheric hazards** arise when Class 4 laser beams interact with air or target materials, potentially producing plasma, ions, and toxic fumes. Compressed gases used in laser systems must be stored, labeled, exhausted, and protected from contaminants properly — different gases must never be mixed. Respiratory protection may be required.\n\n**Fire hazards** are specific to Class 4 lasers. Beam blocks may require water cooling, and appropriately rated fire extinguishers (specifically rated for electrical fires) must be located in every laser controlled area. **Robotic arms and motorized stages** increase the Nominal Hazard Zone (NHZ). Workers need at least 3 feet of clearance around the system. Old laser systems should be returned to the manufacturer for safe disposal due to hazardous chemicals and electrical components."
   },
   "rephrasedQuestions": {
     "1": {
@@ -522,6 +653,131 @@
       ],
       "correctOptionId": "b",
       "oshaClause": "Z136.1 §4.5.3"
+    },
+    "21": {
+      "id": 121,
+      "topic": "control-measures",
+      "difficulty": "hard",
+      "questionText": "When purchasing a laser cleaning system for outdoor use, why is it critical to choose a reputable manufacturer?",
+      "options": [
+        { "id": "a", "text": "They offer longer warranties" },
+        { "id": "b", "text": "Their systems are lighter and more portable" },
+        { "id": "c", "text": "They provide verified technical specifications needed for proper hazard evaluation" }
+      ],
+      "correctOptionId": "c",
+      "oshaClause": "Z136.1 §4.2"
+    },
+    "22": {
+      "id": 122,
+      "topic": "non-beam-hazards",
+      "difficulty": "easy",
+      "questionText": "A technician assumes that the laser beam itself is the only thing they need to protect against. Is this correct?",
+      "options": [
+        { "id": "a", "text": "Yes — the beam is the sole source of danger" },
+        { "id": "b", "text": "No — laser systems also produce non-beam hazards such as electrical, chemical, and fire risks" }
+      ],
+      "correctOptionId": "b",
+      "oshaClause": "Z136.1 §7"
+    },
+    "23": {
+      "id": 123,
+      "topic": "non-beam-hazards",
+      "difficulty": "easy",
+      "questionText": "A Class 4 laser is being used to process metal in an enclosed workspace. Could the air quality be affected?",
+      "options": [
+        { "id": "a", "text": "No — laser beams do not interact with the surrounding air" },
+        { "id": "b", "text": "Yes — Class 4 lasers can produce plasma, ions, and hazardous chemical fumes" }
+      ],
+      "correctOptionId": "b",
+      "oshaClause": "Z136.1 §7.3"
+    },
+    "24": {
+      "id": 124,
+      "topic": "non-beam-hazards",
+      "difficulty": "medium",
+      "questionText": "A pulsed laser system has been powered off. A technician reaches into the power supply to adjust a component. What electrical hazard should they be most concerned about?",
+      "options": [
+        { "id": "a", "text": "Inductors generating magnetic fields" },
+        { "id": "b", "text": "Capacitors that may still retain a lethal charge" },
+        { "id": "c", "text": "Resistors producing static electricity" }
+      ],
+      "correctOptionId": "b",
+      "oshaClause": "Z136.1 §7.4.1"
+    },
+    "25": {
+      "id": 125,
+      "topic": "non-beam-hazards",
+      "difficulty": "medium",
+      "questionText": "A technician touches a component inside a laser power supply and receives a mild burn, even though the laser beam was not involved. What most likely caused this?",
+      "options": [
+        { "id": "a", "text": "A resistive component that was radiating heat from current flow" },
+        { "id": "b", "text": "A capacitor discharging stored energy" },
+        { "id": "c", "text": "An inductor generating electromagnetic interference" }
+      ],
+      "correctOptionId": "a",
+      "oshaClause": "Z136.1 §7.4.2"
+    },
+    "26": {
+      "id": 126,
+      "topic": "non-beam-hazards",
+      "difficulty": "easy",
+      "questionText": "A standard water-based fire extinguisher is placed in a laser controlled area. Is this adequate for all potential fire scenarios?",
+      "options": [
+        { "id": "a", "text": "Yes — any fire extinguisher will work" },
+        { "id": "b", "text": "No — the extinguisher must be rated specifically for electrical fires" }
+      ],
+      "correctOptionId": "b",
+      "oshaClause": "Z136.1 §7.5"
+    },
+    "27": {
+      "id": 127,
+      "topic": "non-beam-hazards",
+      "difficulty": "hard",
+      "questionText": "A custom laser system uses a 48V power supply. Are electrical control measures required?",
+      "options": [
+        { "id": "a", "text": "Yes — any circuit requires control measures" },
+        { "id": "b", "text": "No — electrical control measures are required only for circuits exceeding 50 volts" },
+        { "id": "c", "text": "Only if the system uses capacitors" }
+      ],
+      "correctOptionId": "b",
+      "oshaClause": "Z136.1 §7.4"
+    },
+    "28": {
+      "id": 128,
+      "topic": "non-beam-hazards",
+      "difficulty": "easy",
+      "questionText": "A laser system has exposed wiring with no enclosure, no grounding, and no indicator lights. Which electrical safety controls are missing?",
+      "options": [
+        { "id": "a", "text": "Only grounding is needed" },
+        { "id": "b", "text": "Only enclosures are needed" },
+        { "id": "c", "text": "All three — enclosures, grounding, and indicator lights are all required" }
+      ],
+      "correctOptionId": "c",
+      "oshaClause": "Z136.1 §7.4.3"
+    },
+    "29": {
+      "id": 129,
+      "topic": "non-beam-hazards",
+      "difficulty": "medium",
+      "questionText": "A safety review identifies that a high-power laser system may emit X-rays. Is this considered a non-beam hazard?",
+      "options": [
+        { "id": "a", "text": "No — X-rays are unrelated to laser systems" },
+        { "id": "b", "text": "Yes — non-laser radiation hazards include radio waves, X-rays, thermal radiation, and ionizing radiation" }
+      ],
+      "correctOptionId": "b",
+      "oshaClause": "Z136.1 §7.6"
+    },
+    "30": {
+      "id": 130,
+      "topic": "non-beam-hazards",
+      "difficulty": "easy",
+      "questionText": "Over many years of working near UV-emitting equipment without proper eye protection, what condition could develop?",
+      "options": [
+        { "id": "a", "text": "Color blindness" },
+        { "id": "b", "text": "Cataracts" }
+      ],
+      "correctOptionId": "b",
+      "oshaClause": "Z136.1 §7.6.1"
     }
   }
 }
